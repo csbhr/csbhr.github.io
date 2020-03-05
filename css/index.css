@@ -1,22 +1,5 @@
-body {
-  font: 15px/1.5 -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Fira Sans", "Droid Sans", "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
-  color:#595959;
-  font-weight:400;
-}
-
-a {
-  color:#39c;
-  text-decoration:none;
-}
-
-a:hover {
-  color:#069;
-}
-
 .wrapper {
   width:1060px;
-  margin:0 auto;
-  padding-top:20px;
 }
 
 header {
@@ -34,13 +17,6 @@ section {
   width:840px;
   float:right;
   padding-bottom:50px;
-}
-
-hr {
-  border:0;
-  background:#e5e5e5;
-  height:1px;
-  margin:0 0 20px;
 }
 
 section .pub-item {
