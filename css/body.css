@@ -29,9 +29,10 @@ pre {
 }
 
 .wrapper {
-  width:960px;
+  width:1000px;
   margin:0 auto;
   padding-top:20px;
+  padding-bottom:80px;
 }
 
 .center {
