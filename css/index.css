@@ -1,51 +1,48 @@
+body {
+  font-family: Georgia,serif;
+  font-size: 1.6rem;
+  line-height: 2.2em;
+}
+
+a {
+  color: #000;
+  text-decoration: none;
+  box-shadow: inset 0 -1px 0 #3eb0ef;
+}
+
+a:hover {
+  color: #3eb0ef;
+  cursor: pointer;
+  text-decoration: none;
+}
+
+h1, h2, h3, h4, h5 {
+  font-family: -apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen,Ubuntu,Cantarell,Open Sans,Helvetica Neue,sans-serif;
+}
+
+h2 {
+  font-size: 3.0rem;
+  font-weight: 700;
+  margin: 1.4em 0 1.0em;
+}
+
 .wrapper {
+  background: #fff;
   width:1060px;
+  margin:0 auto;
+  padding: 70px 100px 70px;
 }
 
-header {
-  width:200px;
-  float:left;
-  position:fixed;
-  -webkit-font-smoothing:subpixel-antialiased;
+.Title {
+  /* text-align: center; */
 }
 
-header img {
-  max-width:75%;
+.Title .first-name {
+  font-weight: normal;
 }
 
-section {
-  width:840px;
-  float:right;
-  padding-bottom:50px;
-}
-
-section .pub-item {
-  display: block;
-  float: left;
-  width: 100%;
-  padding-top: 5px;
-  padding-bottom: 5px;
-}
-
-section .pub-item .pub-img {
-  float: left;
-  display: block;
-  position: relative;
-  min-height: 1px;
-  width: 30%;
-  text-align: center;
-}
-
-section .pub-item .pub-img img {
-  max-width:95%;
-  min-height: 120px;
-  box-shadow:0 0 2px #000;
-}
-
-section .pub-item .pub-title {
-  float: right;
-  display: block;
-  position: relative;
-  min-height: 1px;
-  width: 70%;
+.email {
+  color: #000;
+  text-decoration: none;
+  box-shadow: inset 0 -1px 0 #3eb0ef;
 }
