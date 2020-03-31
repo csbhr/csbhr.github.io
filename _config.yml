@@ -2,7 +2,7 @@ title:              Haoran Bai
 email:              hrbai.cs@gmail.com
 description:        Welcome to my homepage~
 author:             Haoran Bai
-baseurl:            "/homepage"
+baseurl:            "/"
 url:                "https://baihaoran.xyz/"
 
 # Social Profiles
