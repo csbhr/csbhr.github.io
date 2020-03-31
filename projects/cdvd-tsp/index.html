@@ -22,7 +22,7 @@
         and Jinhui Tang
       </p>
 
-      <p class="center"><img src="https://s1.ax1x.com/2020/03/31/GQnfpt.png"></p>
+      <p class="center"><img src="https://s1.ax1x.com/2020/03/31/GQnfpt.png" alt="Figure 1. Deblurred result on a real challenging video."></p>
 
       <h2>Abstract</h2>
       <hr>
@@ -59,7 +59,7 @@
 
       <h2>Proposed Algorithm</h2>
       <hr>
-      <p class="center"><img src="https://s1.ax1x.com/2020/03/31/GQutu8.png"></p>
+      <p class="center"><img src="https://s1.ax1x.com/2020/03/31/GQutu8.png" alt="Supp-Figure 1. An overview of the proposed method at one stage."></p>
       <p>
         The proposed algorithm contains the optical flow estimation module, latent image restoration module, and the temporal sharpness prior. For the optical flow estimation, we use the PWC-Net [5] to estimate optical flow. For the latent image restoration module, we use an encoder-decoder architecture based on [26]. However, we do not use the ConvLSTM module. Other network architectures are the same as [26].
       </p>
@@ -89,68 +89,68 @@
       <p>
         Quantitative results on the benchmark dataset by Su et al. [24]. All the restored frames instead of randomly selected 30 frames from each test set [24] are used for evaluations. <em>Note that: Ours* is the result that we further trained to convergence, and Ours is the result reported in the paper.</em>
       </p>
-      <p class='center'><img src="https://s1.ax1x.com/2020/03/31/GQOAv6.png"></p>
+      <p class='center'><img src="https://s1.ax1x.com/2020/03/31/GQOAv6.png" alt="Table 1. Quantitative evaluations on the video deblurring dataset [24] in terms of PSNR and SSIM."></p>
       <p>
         Some deblurred results from the test dataset [24]. The deblurred results in (c)-(g) still contain significant blur effects. The proposed algorithm generates much clearer frames.
       </p>
-      <p class='center'><img src="https://s1.ax1x.com/2020/03/31/GQt01g.png"></p>
+      <p class='center'><img src="https://s1.ax1x.com/2020/03/31/GQt01g.png" alt="Figure 2. Deblurred results on the test dataset [24]."></p>
       <p>
         Quantitative results on the GOPRO dataset by Nah et al.[20].
       </p>
-      <p class='center'><img src="https://s1.ax1x.com/2020/03/31/GQYZi8.png"></p>
+      <p class='center'><img src="https://s1.ax1x.com/2020/03/31/GQYZi8.png" alt="Table 2. Quantitative evaluations on the video deblurring dataset [20] in terms of PSNR and SSIM."></p>
       <p>
         Some deblurred results from [20]. The proposed method generates much better deblurred images, where the license numbers are recognizable.
       </p>
-      <p class='center'><img src="https://s1.ax1x.com/2020/03/31/GQtgA0.png"></p>
+      <p class='center'><img src="https://s1.ax1x.com/2020/03/31/GQtgA0.png" alt="Figure 3. Deblurred results on the test dataset [20]."></p>
       <p>
         Some deblurred results on a real video from [4]. The proposed algorithm recovers a high-quality image with clearer details.
       </p>
-      <p class='center'><img src="https://s1.ax1x.com/2020/03/31/GQtf9U.png"></p>
+      <p class='center'><img src="https://s1.ax1x.com/2020/03/31/GQtf9U.png" alt="Figure 4. Deblurred results on a real video from [4]."></p>
 
       <h3>Effectiveness of the cascaded training</h3>
       <p>
         Effectiveness of the cascaded training algorithm for video deblurring, where “CT” is the abbreviation of cascaded training.
       </p>
-      <p class='center'><img src="https://s1.ax1x.com/2020/03/31/GQN88U.png"></p>
+      <p class='center'><img src="https://s1.ax1x.com/2020/03/31/GQN88U.png" alt="Table 3. Effectiveness of the cascaded training for video deblurring."></p>
       <p>
         Effectiveness of the cascaded training algorithm for video deblurring. (b) denotes the deblurred result by the proposed method without using cascaded training. (c)-(e) denote the results from stage 1, 2, and 3, respectively.Effectiveness of the cascaded training algorithm for video deblurring, where “CT” is the abbreviation of cascaded training.
       </p>
-      <p class='center'><img src="https://s1.ax1x.com/2020/03/31/GQw5wj.png"></p>
+      <p class='center'><img src="https://s1.ax1x.com/2020/03/31/GQw5wj.png" alt="Figure 5. Effectiveness of the cascaded training for video deblurring."></p>
       <p>
         We further note that the optical flow by the proposed method contains sharp boundaries well (see(f)), which facilitates the latent frame restoration.
       </p>
-      <p class='center'><img src="https://s1.ax1x.com/2020/03/31/GQw7Yq.png"></p>
+      <p class='center'><img src="https://s1.ax1x.com/2020/03/31/GQw7Yq.png" alt="Figure 6. Effect of optical flow on video deblurring."></p>
       <p>
         More visual comparisons to demonstrate the effectiveness of the cascaded training.
       </p>
-      <p class='center'><img src="https://s1.ax1x.com/2020/03/31/GQUXOH.png"></p>
+      <p class='center'><img src="https://s1.ax1x.com/2020/03/31/GQUXOH.png" alt="Supp-Figure 3. Effectiveness of the cascaded training for video deblurring."></p>
 
       <h3>Effectiveness of the temporal sharpness prior</h3>
       <p>
         We evaluate the temporal sharpness prior on 4 videos with significant blur effects from the test dataset [24].
       </p>
-      <p class='center'><img src="https://s1.ax1x.com/2020/03/31/GQa01O.png"></p>
+      <p class='center'><img src="https://s1.ax1x.com/2020/03/31/GQa01O.png" alt="Table 4. Effectiveness of the temporal sharpness prior on video deblurring."></p>
       <p>
         Effectivenessofthetemporalsharpnessprior. (a) Blurred input. (b) Visualizations of the intermediate temporal sharpness prior. (c)-(d) denote the results without and with the temporal sharpness prior, respectively.
       </p>
-      <p class='center'><img src="https://s1.ax1x.com/2020/03/31/GQ0e7d.png"></p>
+      <p class='center'><img src="https://s1.ax1x.com/2020/03/31/GQ0e7d.png" alt="Figure 7. Effectivenessofthetemporalsharpnessprior."></p>
       <p>
         To further demonstrate the effectiveness of the proposed algorithm on temporal consistency, we show a real deblurred video.
       </p>
-      <p class='center'><img src="https://s1.ax1x.com/2020/03/31/GQBIGq.png"></p>
+      <p class='center'><img src="https://s1.ax1x.com/2020/03/31/GQBIGq.png" alt="Supp-Figure 4. Effectiveness of the temporal sharpness prior (TSP) for video deblurring."></p>
 
       <h3>Effect of optical flow</h3>
       <p>
         We remove the optical flow estimation module and compare with the method that directly concatenates consecutive frames as the input of the restoration network. In addition, we further evaluate the optical flow estimation module using FlowNet 2.0 [9].
       </p>
-      <p class='center'><img src="https://s1.ax1x.com/2020/03/31/GQBPEj.png"></p>
+      <p class='center'><img src="https://s1.ax1x.com/2020/03/31/GQBPEj.png" alt="Table 5. Effect of the optical flow estimation module."></p>
 
       <h3>More Experimental Results</h3>
       <p>
         In this section, we provide more visual comparisons with state-of-the-art methods. The proposed algorithm generates much clearer frames.
       </p>
-      <p class='center'><img src="https://s1.ax1x.com/2020/03/31/GQD6YR.png"></p>
-      <p class='center'><img src="https://s1.ax1x.com/2020/03/31/GQrpkj.png"></p>
+      <p class='center'><img src="https://s1.ax1x.com/2020/03/31/GQD6YR.png" alt="Supp-Figure 6. Deblurred results on the test dataset [4]."></p>
+      <p class='center'><img src="https://s1.ax1x.com/2020/03/31/GQrpkj.png" alt="Supp-Figure 7. Deblurred results on the test dataset [4]."></p>
       <p>
         More detailed analysis and experimental results are included in <a href="https://baihaoran.xyz/projects/cdvd-tsp/index.html" target="_blank">supplementary materials</a>.
       </p>
