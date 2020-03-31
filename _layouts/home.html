@@ -1,0 +1,49 @@
+---
+layout: default
+---
+
+<!-- Page Header -->
+{% if page.background %}
+<header class="masthead" style="background-image: url('{{ page.background | prepend: site.baseurl | replace: '//', '/' }}')">
+  {% else %}
+  <header class="masthead">
+    {% endif %}
+    <div class="overlay"></div>
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-8 col-md-10 mx-auto">
+          <div class="page-heading">
+            <h1>{{ site.title }}</h1>
+            <!-- {% if site.description %}
+            <span class="subheading">{{ site.description }}</span>
+            {% endif %} -->
+            <span class="subheading">Welcome to my homepage.</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-8 col-md-10 mx-auto">
+
+        <p>
+          Thanks for your attention. I am Haoran Bai, a Ph.D. candidate in School of Computer Science and Engineering, Nanjing University of Science and Technology, China. I am a member of <a href="https://imag-njust.net/" target="_blank">Intelligent Media Analysis Group (IMAG)</a> and advised by Prof. <a href="https://sites.google.com/site/jspanhomepage/" target="_blank">Jinshan Pan</a>.
+        </p>
+
+        <p>
+          My research interest includes image dehazing, image/video enhancement and analysis, and related vision problems. You can contact me by E-mail: <text class="email">hrbai.cs@gmail.com</text> or <text class="email">baihaoran@njust.edu.cn</text>.
+        </p>
+
+        <p>
+          Here is <a href="{{"/assets/cv/cv_haoran_bai.pdf" | relative_url }}" target="_blank">[my CV]</a>, and you can find my publications and projects from <a href="https://github.com/csbhr" target="_blank">[my github]</a>.
+        </p>
+
+        <p>
+          For more information, please click <a href="{{"/about" | relative_url }}">[ABOUT]</a>.
+        </p>
+
+      </div>
+    </div>
+  </div>
