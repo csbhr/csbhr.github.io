@@ -26,23 +26,51 @@ layout: default
 
   <div class="container">
     <div class="row">
-      <div class="col-lg-8 col-md-10 mx-auto">
+      <div class="col-lg-10 col-md-10 mx-auto">
 
         <p>
           Thanks for your attention. I am Haoran Bai, a Ph.D. candidate in School of Computer Science and Engineering, Nanjing University of Science and Technology, China. I am a member of <a href="https://imag-njust.net/" target="_blank">Intelligent Media Analysis Group (IMAG)</a> and advised by Prof. <a href="https://sites.google.com/site/jspanhomepage/" target="_blank">Jinshan Pan</a>.
         </p>
 
         <p>
-          My research interest includes image dehazing, image/video enhancement and analysis, and related vision problems. You can contact me by E-mail: <text class="email">hrbai.cs@gmail.com</text> or <text class="email">baihaoran@njust.edu.cn</text>.
-        </p>
-
-        <p>
-          Here is <a href="{{"/assets/cv/cv_haoran_bai.pdf" | relative_url }}" target="_blank">[my CV]</a>, and you can find my publications and projects from <a href="https://github.com/csbhr" target="_blank">[my github]</a>.
-        </p>
-
-        <p>
           For more information, please click <a href="{{"/about" | relative_url }}">[ABOUT]</a>.
         </p>
+
+        <h1 class="post-overall-title">My Recent Blogs</h1>
+
+        <hr>
+
+        <!-- Home Post List -->
+        {% for post in site.posts limit : 5 %}
+
+        <article class="post-preview">
+          <a href="{{ post.url | prepend: site.baseurl | replace: '//', '/' }}">
+            <h4 class="post-title">{{ post.title }}</h4>
+            {% if post.subtitle %}
+            <h5 class="post-subtitle">{{ post.subtitle }}</h5>
+            {% else %}
+            <h5 class="post-subtitle">{{ post.excerpt | strip_html | truncatewords: 15 }}</h5>
+            {% endif %}
+          </a>
+          <p class="post-meta">Posted by
+            {% if post.author %}
+            {{ post.author }}
+            {% else %}
+            {{ site.author }}
+            {% endif %}
+            on
+            {{ post.date | date: '%B %d, %Y' }} &middot; {% include read_time.html content=post.content %}
+          </p>
+        </article>
+
+        <hr>
+
+        {% endfor %}
+
+        <!-- Pager -->
+        <div class="clearfix">
+          <a class="btn btn-primary float-right" href="{{"/posts" | relative_url }}">View All Blogs &rarr;</a>
+        </div>
 
       </div>
     </div>
