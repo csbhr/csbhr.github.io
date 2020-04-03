@@ -3,6 +3,7 @@ layout: post
 title: "Low-level 中的自监督学习"
 subtitle: "在 low-level 任务中，自监督学习该如何进行监督？"
 date: 2020-03-16 17:00:00 -0400
+catalog: true
 background:
 tags:
     - low-level

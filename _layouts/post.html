@@ -22,6 +22,11 @@ layout: default
               on {{ page.date | date: '%B %d, %Y' }} &middot; {% include read_time.html
               content=page.content %}
             </span>
+            <div class="tags" style="margin-top:10px;">
+                {% for tag in page.tags %}
+                <a class="tag" href="{{ "/posts" | relative_url }}#{{ tag }}" title="{{ tag }}">{{ tag }}</a>
+                {% endfor %}
+            </div>
           </div>
         </div>
       </div>
@@ -30,14 +35,13 @@ layout: default
 
   <div class="container">
     <div class="row">
-      <div class="col-lg-10 col-md-10 mx-auto">
+      <div class="col-lg-8 col-md-10 mx-auto post-container">
 
         {{ content }}
 
         <hr>
 
         <div class="clearfix">
-
           {% if page.previous.url %}
           <a class="btn btn-primary float-left" href="{{ page.previous.url | prepend: site.baseurl | replace: '//', '/' }}" data-toggle="tooltip" data-placement="top" title="{{ page.previous.title }}">&larr; Previous<span class="d-none d-md-inline">
               Post</span></a>
@@ -46,9 +50,19 @@ layout: default
           <a class="btn btn-primary float-right" href="{{ page.next.url | prepend: site.baseurl | replace: '//', '/' }}" data-toggle="tooltip" data-placement="top" title="{{ page.next.title }}">Next<span class="d-none d-md-inline">
               Post</span> &rarr;</a>
           {% endif %}
-
         </div>
 
       </div>
+
+      {% if page.catalog %}
+      <div class="col-lg-2 col-lg-offset-0 visible-lg-block sidebar-container catalog-container">
+          <div class="side-catalog">
+              <hr class="hidden-sm hidden-xs">
+              <h5><a class="catalog-toggle" href="#">CATALOG</a></h5>
+              <ul class="catalog-body"></ul>
+          </div>
+      </div>
+      {% endif %}
+
     </div>
   </div>
