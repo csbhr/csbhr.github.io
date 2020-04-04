@@ -24,7 +24,7 @@ layout: default
             </span>
             <div class="tags" style="margin-top:10px;">
                 {% for tag in page.tags %}
-                <a class="tag" href="{{ "/posts" | relative_url }}#{{ tag }}" title="{{ tag }}">{{ tag }}</a>
+                <a class="tag" href="{{ "/tags" | relative_url }}#{{ tag }}" title="{{ tag }}">{{ tag }}</a>
                 {% endfor %}
             </div>
           </div>
@@ -35,9 +35,9 @@ layout: default
 
   <div class="container">
     <div class="row">
-      <div class="col-lg-8 col-md-10 mx-auto post-container">
+      <div class="col-lg-10 col-md-10 mx-auto post-container">
 
-        {{ content }}
+          {{ content }}
 
         <hr>
 

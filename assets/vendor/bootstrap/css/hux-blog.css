@@ -230,13 +230,13 @@ pre code {
 .postlist-container {
   margin-bottom: 15px;
 }
-.post-container a {
+/* .post-container a {
   color: #337ab7;
 }
 .post-container a:hover,
 .post-container a:focus {
   color: #0085a1;
-}
+} */
 .post-container h1,
 .post-container h2,
 .post-container h3,

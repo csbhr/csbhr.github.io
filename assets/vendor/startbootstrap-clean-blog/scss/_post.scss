@@ -48,3 +48,12 @@
     }
   }
 }
+
+.post-container {
+  > ul, p {
+    line-height: 1.7;
+    font-size: 16px;
+    margin: 10px 10px;
+    font-family: Georgia,serif;
+  }
+}
