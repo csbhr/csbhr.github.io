@@ -201,7 +201,7 @@ class Solution(object):
 - 最后计算`water_height`与`height`的差值，就是雨水的数量。
 
 则关键在于怎样向左和向右淹没呢？以向左为例（向右类似），我采取的方式是：
-- 初始化淹没的左边界`left=now`
+- 初始化淹没的左边界`left=now`，向左遍历
 - 若遇到比`now_height`低的柱子，则继续向左
 - 若遇到与`now_height`相同的柱子`this`，则记录`left=this`，继续向左
 - 若遇到比`now_height`高的柱子`this`，因为这个柱子不能被淹没，则记录`left=this+1`，停止遍历
