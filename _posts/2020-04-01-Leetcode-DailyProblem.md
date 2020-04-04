@@ -7,6 +7,7 @@ catalog: true
 background:
 tags:
     - Leetcode
+    - Problems Collection
 ---
 
 # Leetcode 2020-04 每日一题
@@ -81,7 +82,7 @@ class Solution(object):
 ## 2020-04-03 字符串转换整数 (atoi)
 [Leetcode Link](https://leetcode-cn.com/problems/string-to-integer-atoi/)
 
-由于这个题目的题解与分析比较长，而且比较有代表性，所以放在了单独的 [Blog](https://baihaoran.xyz/2020/04/03/string-to-integer-atoi.html) 中。
+由于这个题目的题解与分析比较长，而且比较有代表性，所以放在了单独的 [Blog](https://baihaoran.xyz/2020/04/03/Leetcode-string-to-integer-atoi.html) 中。
 
 
 ## 2020-04-02 生命游戏
