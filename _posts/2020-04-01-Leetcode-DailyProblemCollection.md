@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Leetcode 2020-04 每日一题"
+title: "Leetcode 2020-04 每日一题 合集"
 subtitle: "Leetcode 每日一题 题解与分析"
 date: 2020-04-03 17:00:00 -0400
 catalog: true
