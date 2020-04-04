@@ -17,7 +17,7 @@ tags:
 [Leetcode Link](https://leetcode-cn.com/problems/maximum-nesting-depth-of-two-valid-parentheses-strings/)  
 
 #### 1. 题目描述
-有效括号字符串定义：对于每个左括号，都能找到与之对应的右括号，反之亦然。
+有效括号字符串定义：对于每个左括号，都能找到与之对应的右括号，反之亦然。  
 嵌套深度 depth 定义：即有效括号字符串嵌套的层数，depth(A) 表示有效括号字符串 A 的嵌套深度。  
 
 给你一个「有效括号字符串」 `seq`，请你将其分成两个不相交的有效括号字符串，`A` 和 `B`，并使这两个字符串的深度最小。  
