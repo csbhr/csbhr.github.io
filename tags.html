@@ -20,7 +20,7 @@ background:
   </span>
   {% for post in tag[1] %}
   <article class="post-preview">
-    <a href="{{ post.url | prepend: site.baseurl | replace: '//', '/' }}">
+    <a href="{{ post.url | prepend: site.baseurl | replace: '//', '/' }}" target="_blank">
       <h2 class="post-title">{{ post.title }}</h2>
       {% if post.subtitle %}
       <h3 class="post-subtitle">{{ post.subtitle }}</h3>

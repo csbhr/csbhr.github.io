@@ -44,7 +44,7 @@ layout: default
         {% for post in site.posts limit : 5 %}
 
         <article class="post-preview">
-          <a href="{{ post.url | prepend: site.baseurl | replace: '//', '/' }}">
+          <a href="{{ post.url | prepend: site.baseurl | replace: '//', '/' }}" target="_blank">
             <h4 class="post-title">{{ post.title }}</h4>
             {% if post.subtitle %}
             <h5 class="post-subtitle">{{ post.subtitle }}</h5>
