@@ -18,7 +18,7 @@ tags:
 ## 2020-04-05 LFU缓存
 [Leetcode Link](https://leetcode-cn.com/problems/lfu-cache/)
 
-此题的题解与分析放在了单独的 [Blog](https://baihaoran.xyz/2020/04/03/Leetcode-lfu-cache.html) 中，请移步阅读。
+此题的题解与分析放在了单独的 [Blog](https://baihaoran.xyz/2020/04/04/Leetcode-lfu-cache.html) 中，请移步阅读。
 
 
 ## 2020-04-04 接雨水
