@@ -9,7 +9,7 @@ tags:
     - Leetcode
 ---
 
-# 圆圈中最后剩下的数字
+# LFU缓存
 [Leetcode Link](https://leetcode-cn.com/problems/lfu-cache/)
 
 ## 1. 题目描述
