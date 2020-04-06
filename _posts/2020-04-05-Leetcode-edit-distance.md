@@ -9,8 +9,8 @@ tags:
     - Leetcode
 ---
 
-# 编辑距离
-[Leetcode Link](https://leetcode-cn.com/problems/edit-distance/)
+# 编辑距离 [[Link]](https://leetcode-cn.com/problems/edit-distance/)
+[Leetcode 4月每日一题合集](https://baihaoran.xyz/2020/04/01/Leetcode-DailyProblemCollection.html)
 
 ## 1. 题目描述
 给你两个单词 word1 和 word2，请你计算出将 word1 转换成 word2 所使用的最少操作数 。

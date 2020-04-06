@@ -9,8 +9,8 @@ tags:
     - Leetcode
 ---
 
-# LFU缓存
-[Leetcode Link](https://leetcode-cn.com/problems/lfu-cache/)
+# LFU缓存 [[Link]](https://leetcode-cn.com/problems/lfu-cache/)
+[Leetcode 4月每日一题合集](https://baihaoran.xyz/2020/04/01/Leetcode-DailyProblemCollection.html)
 
 ## 1. 题目描述
 设计并实现 [最不经常使用（LFU）](https://baike.baidu.com/item/%E7%BC%93%E5%AD%98%E7%AE%97%E6%B3%95)缓存的数据结构。它应该支持以下操作：`get` 和 `put`。

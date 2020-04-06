@@ -9,8 +9,8 @@ tags:
     - Leetcode
 ---
 
-# 接雨水
-[Leetcode Link](https://leetcode-cn.com/problems/trapping-rain-water/)  
+# 接雨水 [[Link]](https://leetcode-cn.com/problems/trapping-rain-water/)
+[Leetcode 4月每日一题合集](https://baihaoran.xyz/2020/04/01/Leetcode-DailyProblemCollection.html)
 
 ## 1. 题目描述
 给定 n 个非负整数表示每个宽度为 1 的柱子的高度图，计算按此排列的柱子，下雨之后能接多少雨水。  

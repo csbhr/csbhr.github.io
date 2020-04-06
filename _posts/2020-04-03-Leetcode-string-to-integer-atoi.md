@@ -9,8 +9,8 @@ tags:
     - Leetcode
 ---
 
-# 字符串转换整数 (atoi)
-[Leetcode Link](https://leetcode-cn.com/problems/string-to-integer-atoi/)
+# 字符串转换整数 (atoi) [[Link]](https://leetcode-cn.com/problems/string-to-integer-atoi/)
+[Leetcode 4月每日一题合集](https://baihaoran.xyz/2020/04/01/Leetcode-DailyProblemCollection.html)
 
 ## 1. 题目描述
 请你来实现一个 `atoi` 函数，使其能将字符串转换成整数。  

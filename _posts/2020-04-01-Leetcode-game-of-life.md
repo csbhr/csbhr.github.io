@@ -9,8 +9,8 @@ tags:
     - Leetcode
 ---
 
-# 生命游戏
-[Leetcode Link](https://leetcode-cn.com/problems/game-of-life/)  
+# 生命游戏 [[Link]](https://leetcode-cn.com/problems/game-of-life/)
+[Leetcode 4月每日一题合集](https://baihaoran.xyz/2020/04/01/Leetcode-DailyProblemCollection.html)
 
 ## 1. 题目描述
 根据[百度百科](https://baike.baidu.com/item/%E7%94%9F%E5%91%BD%E6%B8%B8%E6%88%8F/2926434?fr=aladdin)，生命游戏，简称为生命，是英国数学家约翰·何顿·康威在 1970 年发明的细胞自动机。
