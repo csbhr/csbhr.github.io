@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "LFU缓存"
-subtitle: "Leetcode 面试题"
+subtitle: "Leetcode 2020-04-05 每日一题"
 date: 2020-04-04 17:00:00 -0400
 catalog: true
 background:
