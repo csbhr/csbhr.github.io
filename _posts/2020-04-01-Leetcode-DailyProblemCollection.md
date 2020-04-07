@@ -54,4 +54,4 @@ tags:
 ## 2020-04-01 有效括号的嵌套深度
 [Leetcode Link](https://leetcode-cn.com/problems/maximum-nesting-depth-of-two-valid-parentheses-strings/)  
 
-此题的题解与分析在了单独的 [Blog](https://baihaoran.xyz/2020/03/30/Leetcode-maximum-nesting-depth-of-two-valid-parentheses-strings.html) 中，请移步阅读。
+此题的题解与分析在了单独的 [Blog](https://baihaoran.xyz/2020/03/31/Leetcode-maximum-nesting-depth-of-two-valid-parentheses-strings.html) 中，请移步阅读。
