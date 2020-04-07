@@ -42,7 +42,7 @@ tags:
 ## 2020-04-03 字符串转换整数 (atoi)
 [Leetcode Link](https://leetcode-cn.com/problems/string-to-integer-atoi/)
 
-此题的题解与分析在了单独的 [Blog](https://baihaoran.xyz/2020/04/03/Leetcode-string-to-integer-atoi.html) 中，请移步阅读。
+此题的题解与分析在了单独的 [Blog](https://baihaoran.xyz/2020/04/02/Leetcode-string-to-integer-atoi.html) 中，请移步阅读。
 
 
 ## 2020-04-02 生命游戏

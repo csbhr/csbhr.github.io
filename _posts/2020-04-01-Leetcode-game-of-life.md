@@ -2,7 +2,7 @@
 layout: post
 title: "生命游戏"
 subtitle: "Leetcode 2020-04-02 每日一题"
-date: 2020-04-01 17:00:00 -0400
+date: 2020-04-01 22:00:00 -0400
 catalog: true
 background:
 tags:
