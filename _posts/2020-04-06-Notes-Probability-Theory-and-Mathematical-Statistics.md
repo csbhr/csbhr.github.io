@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "概率论与数理统计-笔记"
+title: "概率论与数理统计笔记"
 subtitle: "概率论与数理统计笔记"
 date: 2020-04-06 17:00:00 -0400
 catalog: true
@@ -82,11 +82,6 @@ $$\overline{\bigcap_{i=1}^{n}A_i}=\bigcup_{i=1}^{n}\overline{A_i},$$
 2. 设 $\Omega$ 为必然事件，则 $P(\Omega)=1$
 3. 若事件 $A$ 和 $B$ 不相容，则 $P(A\cup B)=P(A)+P(B)$, 并可推广至无穷：$P(\bigcup_{i=1}^{n}A_i)=\sum_{i=1}^{\infty}P(A_i)$.
 
-> 注：一般情况下，
-> 1. $P(A\cup B)=P(A)+P(B)-P(AB)$，$P(A\cup B \cup C)=P(A)+P(B)+P(C)-P(AB)-P(AC)-P(BC)+P(ABC)$
-> 2. $P(\overline{A})=1-P(A)$
-> 3. $P(A-B)=P(A)-P(AB)$
-
 ### 1.4 条件概率
 条件概率就是知道了 **一定信息** 下得到的随机事件的概率。设事件 $A$ 和 $B$ 是随机试验 $\Omega$ 中的两个事件，$P(B)>0$，称 $P(A|B)=\frac{P(AB)}{P(B)}$
 为事件 $B$ 发生条件下事件 $A$ 发生的条件概率，可用图形表示：  
@@ -99,7 +94,9 @@ $$\overline{\bigcap_{i=1}^{n}A_i}=\bigcup_{i=1}^{n}\overline{A_i},$$
 - 若 $B_1 \cap B_2=\phi$，则 $P(B_1\cup B_2\|A)=P(B_1\|A)+P(B_2\|A)$，可推广至无穷。
 
 #### 1.4.2 乘法定理
-由 $P(A\|B)=\frac{P(AB)}{P(B)} \Rightarrow P(AB)=P(A\|B)P(B)$，可推广至 $P(A_1 A_2 ...A_n)=P(A_1)P(A_2\|A_1)...P(A_n\|A_1...A_{n-1})$
+由 $P(A\|B)=\frac{P(AB)}{P(B)} \Rightarrow P(AB)=P(A\|B)P(B)$，可推广至:
+
+$$P(A_1 A_2 ...A_n)=P(A_1)P(A_2\|A_1)...P(A_n\|A_1...A_{n-1})$$
 
 > 注：右边看似麻烦，其实容易算，左边看似简单，但是难算。
 
@@ -131,27 +128,27 @@ $$P(B_i|A)=\frac{P(A|B_i)P(B_i)}{P(A)}=\frac{P(A|B_i)P(B_i)}{\sum_{j=1}^{n}P(A|B
 > - 不相容没有公共部分，$P(AB)=0$  
 > - 独立一定相容
 
-### 1.9 重要公式与结论
+### 1.8 重要公式与结论
+可以利用这个图示来理解这些公式：
+![重要公式图示](https://s1.ax1x.com/2020/04/07/GgrglF.png)
 
-$$
-\begin{align}
-&(1)\ P(\overline{A})=1-P(A)\\
-\\
-&(2)\ P(A \cup B)=P(A)+P(B)-P(AB)\\
-\\
-&(3)\ P(A\cup B \cup C)=P(A)+P(B)+P(C)-P(AB)-P(AC)-P(BC)+P(ABC)\\
-\\
-&(4)\ P(A-B)=P(A)-P(AB)\\
-\\
-&(5)\ P(A\overline{B})=P(A)-P(AB),P(A)=P(AB)+P(A\overline{B}),\\
-&\ \ \ \ \ \ P(A\cup B)=P(A)+P(\overline{A}B)=P(AB)+P(A\overline{B})+P(\overline{A}B)\\
-\\
-&(6)\ P(\overline{A}_1|B)=1-P(A_1|B),P(A_1\cup A_2|B)=P(A_1|B)+P(A_2|B)-P(A_1A_2|B)\\
-&\ \ \ \ \ P(A_1A_2|B)=P(A_1|B)P(A_2|A_1B)\\
-\\
-&(7)\ 若A_1,A_2,...A_n相独立，则P(\bigcap_{i=1}^{n}A_i)=\prod_{i=1}^{n}P(A_i),P(\bigcup_{i=1}^{n}A_i)=\prod_{i=1}^{n}(1-P(A_i))
-\end{align}
-$$
+1. $P(\overline{A})=1-P(A)$
+
+2. $P(A\cup B)=P(A)+P(B)-P(AB)$  
+$P(A\cup B \cup C)=P(A)+P(B)+P(C)-P(AB)-P(AC)-P(BC)+P(ABC)$
+
+3. $P(A)=P(AB)+P(A\overline{B})$  
+$P(A\cup B)=P(A)+P(\overline{A}B)=P(AB)+P(A\overline{B})+P(\overline{A}B)$
+
+4. $P(A-B)=P(A)-P(AB)$
+
+5. $P(\overline{A}_1\|B)=1-P(A_1\|B)$  
+$P(A_1\cup A_2\|B)=P(A_1\|B)+P(A_2\|B)-P(A_1A_2\|B)$  
+$P(A_1A_2\|B)=P(A_1\|B)P(A_2\|A_1B)$
+
+6. 若 $A_1,A_2,...A_n$ 相独立, 则  
+$P(\bigcap_{i=1}^{n}A_i)=\prod_{i=1}^{n}P(A_i)$  
+$P(\bigcup_{i=1}^{n}A_i)=1-\prod_{i=1}^{n}(1-P(A_i))$
 
 ## 二 随机变量及其分布
 
