@@ -15,6 +15,12 @@ tags:
 *持续更新中 ...*
 
 
+## 2020-04-08 机器人的运动范围
+[Leetcode Link](https://leetcode-cn.com/problems/ji-qi-ren-de-yun-dong-fan-wei-lcof/)
+
+此题的题解与分析在了单独的 [Blog](https://baihaoran.xyz/2020/04/07/Leetcode-ji-qi-ren-de-yun-dong-fan-wei-lcof.html) 中，请移步阅读。
+
+
 ## 2020-04-07 旋转矩阵
 [Leetcode Link](https://leetcode-cn.com/problems/rotate-matrix-lcci/)
 
