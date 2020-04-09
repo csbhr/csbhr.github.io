@@ -15,6 +15,12 @@ tags:
 *持续更新中 ...*
 
 
+## 2020-04-09 括号生成
+[Leetcode Link](https://leetcode-cn.com/problems/generate-parentheses/)
+
+此题的题解与分析在了单独的 [Blog](https://baihaoran.xyz/2020/04/08/Leetcode-generate-parentheses.html) 中，请移步阅读。
+
+
 ## 2020-04-08 机器人的运动范围
 [Leetcode Link](https://leetcode-cn.com/problems/ji-qi-ren-de-yun-dong-fan-wei-lcof/)
 

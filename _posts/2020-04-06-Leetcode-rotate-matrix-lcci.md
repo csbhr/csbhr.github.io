@@ -9,7 +9,7 @@ tags:
     - Leetcode
 ---
 
-# 编辑距离 [[Link]](https://leetcode-cn.com/problems/rotate-matrix-lcci/)
+# 旋转矩阵 [[Link]](https://leetcode-cn.com/problems/rotate-matrix-lcci/)
 [Leetcode 4月每日一题合集](https://baihaoran.xyz/2020/04/01/Leetcode-DailyProblemCollection.html)
 
 ## 1. 题目描述
