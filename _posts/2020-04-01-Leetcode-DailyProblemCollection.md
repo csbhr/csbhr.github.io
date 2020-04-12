@@ -15,6 +15,18 @@ tags:
 *持续更新中 ...*
 
 
+## 2020-04-12 交点
+[Leetcode Link](https://leetcode-cn.com/problems/intersection-lcci/)
+
+此题的题解与分析在了单独的 [Blog](https://baihaoran.xyz/2020/04/11/Leetcode-intersection-lcci.html) 中，请移步阅读。
+
+
+## 2020-04-11 鸡蛋掉落
+[Leetcode Link](https://leetcode-cn.com/problems/super-egg-drop/)
+
+Coming Soon 。。。
+
+
 ## 2020-04-10 翻转字符串里的单词
 [Leetcode Link](https://leetcode-cn.com/problems/reverse-words-in-a-string/)
 
