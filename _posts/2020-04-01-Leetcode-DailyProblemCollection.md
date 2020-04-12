@@ -24,7 +24,7 @@ tags:
 ## 2020-04-11 鸡蛋掉落
 [Leetcode Link](https://leetcode-cn.com/problems/super-egg-drop/)
 
-Coming Soon 。。。
+此题的题解与分析在了单独的 [Blog](https://baihaoran.xyz/2020/04/10/Leetcode-super-egg-drop.html) 中，请移步阅读。
 
 
 ## 2020-04-10 翻转字符串里的单词
