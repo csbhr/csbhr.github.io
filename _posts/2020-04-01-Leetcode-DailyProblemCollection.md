@@ -15,6 +15,12 @@ tags:
 *持续更新中 ...*
 
 
+## 2020-04-13 设计推特
+[Leetcode Link](https://leetcode-cn.com/problems/design-twitter/)
+
+此题的题解与分析在了单独的 [Blog](https://baihaoran.xyz/2020/04/12/Leetcode-design-twitter.html) 中，请移步阅读。
+
+
 ## 2020-04-12 交点
 [Leetcode Link](https://leetcode-cn.com/problems/intersection-lcci/)
 
