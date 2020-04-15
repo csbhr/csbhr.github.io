@@ -52,9 +52,9 @@ tags:
 输出：4
 ```
 
-## 题解一
+## 2. 题解一
 
-### 题解与思路
+### 2.1 题解与思路
 题解一参考了 Bilibili [@李永乐老师官方](https://space.bilibili.com/9458053?from=search&seid=1708918051013983301) 的一期视频 [双蛋问题](https://www.bilibili.com/video/BV1KE41137PK)，李老师讲解的非常细致，很值得学习。
 
 我下面整理一下主要思路，采用的是 **动态规划** 的算法，定义 “$K$个鸡蛋，$N$层楼” 的解为 $F(K,N)$, 考虑最小子问题：
@@ -74,7 +74,7 @@ tags:
 
 这个算法，时间复杂度为 $O(KNlogN)$，但还是运行超时了。
 
-### 代码
+### 2.2 代码
 本解法 `Python` 代码如下
 ```python
 class Solution(object):
@@ -107,12 +107,12 @@ class Solution(object):
 ```
 
 
-## 题解二
+## 3. 题解二
 
-### 题解与思路
+### 3.1 题解与思路
 题解二的方法很不常见，我参考了 [官方的题解](https://leetcode-cn.com/problems/super-egg-drop/solution/ji-dan-diao-luo-by-leetcode-solution/) 的方法三。
 
-### 代码
+### 3.2 代码
 本解法 `Python` 代码如下
 ```python
 class Solution(object):
