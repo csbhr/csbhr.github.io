@@ -9,7 +9,7 @@ background:
 <h4><i>Tags: click for related blogs.</i></h4>
 <div id='tag_cloud' class="tags">
 {% for tag in site.tags %}
-<a href="{{ "/tags" | relative_url }}#{{ tag[0] }}" title="{{ tag[0] }}" rel="{{ tag[1].size }}">{{ tag[0] }}</a>
+<a href="{{ "/tags" | relative_url }}#{{ tag[0] }}" title="{{ tag[0] }}" rel="{{ tag[1].size }}">{{ tag[0] }} ({{ tag[1].size }})</a>
 {% endfor %}
 </div>
 
