@@ -7,6 +7,7 @@ catalog: true
 background:
 tags:
     - Leetcode
+    - 贪心算法
 ---
 
 # 跳跃游戏 [[Link]](https://leetcode-cn.com/problems/jump-game/)

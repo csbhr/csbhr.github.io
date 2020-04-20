@@ -6,9 +6,9 @@ date: 2020-03-16 17:00:00 -0400
 catalog: true
 background:
 tags:
-    - low-level
-    - deep learning
-    - self-supervised learning
+    - Low-Level
+    - Deep-Learning
+    - 自监督
 ---
 
 # Low-level 中的自监督学习

@@ -7,6 +7,7 @@ catalog: true
 background:
 tags:
     - Leetcode
+    - 动态规划
 ---
 
 # 编辑距离 [[Link]](https://leetcode-cn.com/problems/edit-distance/)

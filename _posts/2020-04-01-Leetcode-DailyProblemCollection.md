@@ -7,12 +7,24 @@ catalog: true
 background:
 tags:
     - Leetcode
-    - Problems Collection
+    - Leetcode题目合集
 ---
 
 # Leetcode 2020-04 每日一题 [[Link]](https://leetcode-cn.com/problemset/2020-04/)
 
 *持续更新中 ...*
+
+
+## 2020-04-20 岛屿数量
+[Leetcode Link](https://leetcode-cn.com/problems/number-of-islands/)
+
+此题的题解与分析在了单独的 [Blog](https://baihaoran.xyz/2020/04/19/Leetcode-number-of-islands.html) 中，请移步阅读。
+
+
+## 2020-04-19 统计重复个数
+[Leetcode Link](https://leetcode-cn.com/problems/count-the-repetitions/)
+
+Coming Soon。。。
 
 
 ## 2020-04-18 盛最多水的容器

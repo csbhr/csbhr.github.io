@@ -7,6 +7,7 @@ catalog: true
 background:
 tags:
     - Leetcode
+    - 确定有限状态机
 ---
 
 # 字符串转换整数 (atoi) [[Link]](https://leetcode-cn.com/problems/string-to-integer-atoi/)

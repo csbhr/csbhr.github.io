@@ -7,6 +7,7 @@ catalog: true
 background:
 tags:
     - Leetcode
+    - 约瑟夫问题
 ---
 
 # 圆圈中最后剩下的数字 [[Link]](https://leetcode-cn.com/problems/yuan-quan-zhong-zui-hou-sheng-xia-de-shu-zi-lcof/)

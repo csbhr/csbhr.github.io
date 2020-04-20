@@ -7,6 +7,7 @@ catalog: true
 background:
 tags:
     - Leetcode
+    - 动态规划
 ---
 
 # 鸡蛋掉落 [[Link]](https://leetcode-cn.com/problems/super-egg-drop/)

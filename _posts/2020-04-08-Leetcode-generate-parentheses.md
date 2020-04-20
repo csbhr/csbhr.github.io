@@ -7,6 +7,7 @@ catalog: true
 background:
 tags:
     - Leetcode
+    - 递归
 ---
 
 # 括号生成 [[Link]](https://leetcode-cn.com/problems/generate-parentheses/)

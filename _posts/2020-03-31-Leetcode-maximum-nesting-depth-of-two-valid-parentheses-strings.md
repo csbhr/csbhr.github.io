@@ -7,6 +7,7 @@ catalog: true
 background:
 tags:
     - Leetcode
+    - 栈
 ---
 
 # 有效括号的嵌套深度 [[Link]](https://leetcode-cn.com/problems/maximum-nesting-depth-of-two-valid-parentheses-strings/)

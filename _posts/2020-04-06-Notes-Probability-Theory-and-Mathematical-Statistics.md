@@ -6,7 +6,7 @@ date: 2020-04-06 17:00:00 -0400
 catalog: true
 background:
 tags:
-    - Statistics
+    - 概率论与数理统计
     - Notes
 ---
 

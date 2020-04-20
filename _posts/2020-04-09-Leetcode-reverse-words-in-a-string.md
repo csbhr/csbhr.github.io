@@ -7,6 +7,7 @@ catalog: true
 background:
 tags:
     - Leetcode
+    - 确定有限状态机
 ---
 
 # 翻转字符串里的单词 [[Link]](https://leetcode-cn.com/problems/reverse-words-in-a-string/)

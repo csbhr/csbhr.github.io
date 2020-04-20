@@ -7,6 +7,8 @@ catalog: true
 background:
 tags:
     - Leetcode
+    - 调度算法
+    - 链表操作
 ---
 
 # LFU缓存 [[Link]](https://leetcode-cn.com/problems/lfu-cache/)
