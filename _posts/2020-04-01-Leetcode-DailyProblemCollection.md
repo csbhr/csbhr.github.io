@@ -15,6 +15,12 @@ tags:
 *持续更新中 ...*
 
 
+## 2020-04-21 统计「优美子数组」
+[Leetcode Link](https://leetcode-cn.com/problems/count-number-of-nice-subarrays/)
+
+此题的题解与分析在了单独的 [Blog](https://baihaoran.xyz/2020/04/20/Leetcode-count-number-of-nice-subarrays.html) 中，请移步阅读。
+
+
 ## 2020-04-20 岛屿数量
 [Leetcode Link](https://leetcode-cn.com/problems/number-of-islands/)
 
