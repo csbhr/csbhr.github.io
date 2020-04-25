@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "圆圈中最后剩下的数字"
-subtitle: "Leetcode 面试题"
+subtitle: "Leetcode算法题 面试题62"
 date: 2020-04-03 17:00:00 -0400
 catalog: true
 background:

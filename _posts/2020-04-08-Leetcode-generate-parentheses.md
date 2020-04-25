@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "括号生成"
-subtitle: "Leetcode 2020-04-09 每日一题"
+subtitle: "Leetcode算法题 22"
 date: 2020-04-08 17:00:00 -0400
 catalog: true
 background:

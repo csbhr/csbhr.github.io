@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "接雨水"
-subtitle: "Leetcode 2020-04-04 每日一题"
+subtitle: "Leetcode算法题 42"
 date: 2020-04-03 17:00:00 -0400
 catalog: true
 background:

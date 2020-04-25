@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "鸡蛋掉落"
-subtitle: "Leetcode 2020-04-11 每日一题"
+subtitle: "Leetcode算法题 887"
 date: 2020-04-10 17:00:00 -0400
 catalog: true
 background:

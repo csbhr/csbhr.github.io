@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "二叉树的右视图"
-subtitle: "Leetcode 2020-04-22 每日一题"
+subtitle: "Leetcode算法题 199"
 date: 2020-04-21 17:00:00 -0400
 catalog: true
 background:

@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "翻转字符串里的单词"
-subtitle: "Leetcode 2020-04-10 每日一题"
+subtitle: "Leetcode算法题 151"
 date: 2020-04-09 17:00:00 -0400
 catalog: true
 background:

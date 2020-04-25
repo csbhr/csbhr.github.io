@@ -15,6 +15,24 @@ tags:
 *持续更新中 ...*
 
 
+## 2020-04-25 全排列
+[Leetcode Link](https://leetcode-cn.com/problems/permutations/)
+
+此题的题解与分析在了单独的 [Blog](https://baihaoran.xyz/2020/04/24/Leetcode-permutations.html) 中，请移步阅读。
+
+
+## 2020-04-24 数组中的逆序对
+[Leetcode Link](https://leetcode-cn.com/problems/shu-zu-zhong-de-ni-xu-dui-lcof/)
+
+此题的题解与分析在了单独的 [Blog](https://baihaoran.xyz/2020/04/23/Leetcode-shu-zu-zhong-de-ni-xu-dui-lcof.html) 中，请移步阅读。
+
+
+## 2020-04-23 硬币
+[Leetcode Link](https://leetcode-cn.com/problems/coin-lcci/)
+
+此题的题解与分析在了单独的 [Blog](https://baihaoran.xyz/2020/04/22/Leetcode-coin-lcci.html) 中，请移步阅读。
+
+
 ## 2020-04-22 二叉树的右视图
 [Leetcode Link](https://leetcode-cn.com/problems/binary-tree-right-side-view/)
 
