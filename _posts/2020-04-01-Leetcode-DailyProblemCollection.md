@@ -12,7 +12,35 @@ tags:
 
 # Leetcode 2020-04 每日一题 [[Link]](https://leetcode-cn.com/problemset/2020-04/)
 
-*持续更新中 ...*
+
+## 2020-04-30 快乐数
+[Leetcode Link](https://leetcode-cn.com/problems/happy-number/)
+
+此题的题解与分析在了单独的 [Blog](https://baihaoran.xyz/2020/04/29/Leetcode-happy-number.html) 中，请移步阅读。
+
+
+## 2020-04-29 山脉数组中查找目标值
+[Leetcode Link](https://leetcode-cn.com/problems/find-in-mountain-array/)
+
+此题的题解与分析在了单独的 [Blog](https://baihaoran.xyz/2020/04/28/Leetcode-find-in-mountain-array.html) 中，请移步阅读。
+
+
+## 2020-04-28 数组中数字出现的次数
+[Leetcode Link](https://leetcode-cn.com/problems/shu-zu-zhong-shu-zi-chu-xian-de-ci-shu-lcof/)
+
+此题的题解与分析在了单独的 [Blog](https://baihaoran.xyz/2020/04/27/Leetcode-shu-zu-zhong-shu-zi-chu-xian-de-ci-shu-lcof.html) 中，请移步阅读。
+
+
+## 2020-04-27 搜索旋转排序数组
+[Leetcode Link](https://leetcode-cn.com/problems/search-in-rotated-sorted-array/)
+
+此题的题解与分析在了单独的 [Blog](https://baihaoran.xyz/2020/04/26/Leetcode-search-in-rotated-sorted-array.html) 中，请移步阅读。
+
+
+## 2020-04-26 合并K个排序链表
+[Leetcode Link](https://leetcode-cn.com/problems/merge-k-sorted-lists/)
+
+此题的题解与分析在了单独的 [Blog](https://baihaoran.xyz/2020/04/25/Leetcode-merge-k-sorted-lists.html) 中，请移步阅读。
 
 
 ## 2020-04-25 全排列

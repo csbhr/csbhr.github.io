@@ -8,7 +8,7 @@ background:
 tags:
     - Low-Level
     - Deep-Learning
-    - 自监督
+    - 自监督学习
 ---
 
 # Low-level 中的自监督学习
