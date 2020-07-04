@@ -5,3 +5,4 @@ Gemfile.lock
 *.gem
 images
 _posts/*draft*.md
+.DS_Store
