@@ -7,7 +7,6 @@ catalog: true
 background:
 tags:
     - Leetcode
-    - Leetcode题目合集
 ---
 
 # Leetcode 2020-04 每日一题 [[Link]](https://leetcode-cn.com/problemset/2020-04/)

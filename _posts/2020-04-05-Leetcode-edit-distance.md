@@ -7,11 +7,12 @@ catalog: true
 background:
 tags:
     - Leetcode
-    - 动态规划
 ---
 
 # 编辑距离 [[Link]](https://leetcode-cn.com/problems/edit-distance/)
 [Leetcode 4月每日一题合集](https://baihaoran.xyz/2020/04/01/Leetcode-DailyProblemCollection.html)
+
+**涉及知识点：动态规划**
 
 ## 1. 题目描述
 给你两个单词 word1 和 word2，请你计算出将 word1 转换成 word2 所使用的最少操作数 。

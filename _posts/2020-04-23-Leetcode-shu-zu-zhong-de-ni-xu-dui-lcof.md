@@ -7,12 +7,12 @@ catalog: true
 background:
 tags:
     - Leetcode
-    - 分治法
-    - 归并排序
 ---
 
 # 数组中的逆序对 [[Link]](https://leetcode-cn.com/problems/shu-zu-zhong-de-ni-xu-dui-lcof/)
 [Leetcode 4月每日一题合集](https://baihaoran.xyz/2020/04/01/Leetcode-DailyProblemCollection.html)
+
+**涉及知识点：分治法、归并排序**
 
 ## 1. 题目描述
 在数组中的两个数字，如果前面一个数字大于后面的数字，则这两个数字组成一个逆序对。输入一个数组，求出这个数组中的逆序对的总数。

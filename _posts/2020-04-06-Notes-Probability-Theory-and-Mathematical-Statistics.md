@@ -7,7 +7,6 @@ catalog: true
 background:
 tags:
     - 概率论与数理统计
-    - Notes
 ---
 
 # 概率论与数理统计笔记

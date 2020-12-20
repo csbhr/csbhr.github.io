@@ -7,11 +7,12 @@ catalog: true
 background:
 tags:
     - Leetcode
-    - 递归
 ---
 
 # 括号生成 [[Link]](https://leetcode-cn.com/problems/generate-parentheses/)
 [Leetcode 4月每日一题合集](https://baihaoran.xyz/2020/04/01/Leetcode-DailyProblemCollection.html)
+
+**涉及知识点：递归**
 
 ## 1. 题目描述
 给出 `n` 代表生成括号的对数，请你写出一个函数，使其能够生成所有可能的并且有效的括号组合。

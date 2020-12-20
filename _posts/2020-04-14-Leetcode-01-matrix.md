@@ -7,11 +7,12 @@ catalog: true
 background:
 tags:
     - Leetcode
-    - 图的遍历
 ---
 
 # 01 矩阵 [[Link]](https://leetcode-cn.com/problems/01-matrix/)
 [Leetcode 4月每日一题合集](https://baihaoran.xyz/2020/04/01/Leetcode-DailyProblemCollection.html)
+
+**涉及知识点：图的遍历**
 
 ## 1. 题目描述
 给定一个由 `0` 和 `1` 组成的矩阵，找出每个元素到最近的 `0` 的距离。

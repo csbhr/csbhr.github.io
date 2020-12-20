@@ -7,11 +7,12 @@ catalog: true
 background:
 tags:
     - Leetcode
-    - 回溯法
 ---
 
 # 全排列 [[Link]](https://leetcode-cn.com/problems/permutations/)
 [Leetcode 4月每日一题合集](https://baihaoran.xyz/2020/04/01/Leetcode-DailyProblemCollection.html)
+
+**涉及知识点：回溯法**
 
 ## 1. 题目描述
 给定一个 没有重复 数字的序列，返回其所有可能的全排列。

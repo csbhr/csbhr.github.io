@@ -7,11 +7,12 @@ catalog: true
 background:
 tags:
     - Leetcode
-    - 贪心算法
 ---
 
 # 跳跃游戏 [[Link]](https://leetcode-cn.com/problems/jump-game/)
 [Leetcode 4月每日一题合集](https://baihaoran.xyz/2020/04/01/Leetcode-DailyProblemCollection.html)
+
+**涉及知识点：贪心算法**
 
 ## 1. 题目描述
 给定一个非负整数数组，你最初位于数组的第一个位置。

@@ -7,11 +7,12 @@ catalog: true
 background:
 tags:
     - Leetcode
-    - 链表操作
 ---
 
 # 两数相加 II [[Link]](https://leetcode-cn.com/problems/add-two-numbers-ii/)
 [Leetcode 4月每日一题合集](https://baihaoran.xyz/2020/04/01/Leetcode-DailyProblemCollection.html)
+
+**涉及知识点：链表操作**
 
 ## 1. 题目描述
 给你两个 **非空** 链表来代表两个非负整数。数字最高位位于链表开始位置。它们的每个节点只存储一位数字。将这两数相加会返回一个新的链表。

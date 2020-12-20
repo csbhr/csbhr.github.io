@@ -7,11 +7,12 @@ catalog: true
 background:
 tags:
     - Leetcode
-    - 栈
 ---
 
 # 有效括号的嵌套深度 [[Link]](https://leetcode-cn.com/problems/maximum-nesting-depth-of-two-valid-parentheses-strings/)
 [Leetcode 4月每日一题合集](https://baihaoran.xyz/2020/04/01/Leetcode-DailyProblemCollection.html)
+
+**涉及知识点：栈**
 
 ## 1. 题目描述
 有效括号字符串定义：对于每个左括号，都能找到与之对应的右括号，反之亦然。  

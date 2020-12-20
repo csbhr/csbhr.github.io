@@ -7,11 +7,12 @@ catalog: true
 background:
 tags:
     - Leetcode
-    - 二叉树操作
 ---
 
 # 二叉树的右视图 [[Link]](https://leetcode-cn.com/problems/binary-tree-right-side-view/)
 [Leetcode 4月每日一题合集](https://baihaoran.xyz/2020/04/01/Leetcode-DailyProblemCollection.html)
+
+**涉及知识点：二叉树操作**
 
 ## 1. 题目描述
 给定一棵二叉树，想象自己站在它的右侧，按照从顶部到底部的顺序，返回从右侧所能看到的节点值。

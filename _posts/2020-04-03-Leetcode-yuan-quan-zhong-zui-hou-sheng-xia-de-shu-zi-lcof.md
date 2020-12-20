@@ -7,11 +7,12 @@ catalog: true
 background:
 tags:
     - Leetcode
-    - 约瑟夫问题
 ---
 
 # 圆圈中最后剩下的数字 [[Link]](https://leetcode-cn.com/problems/yuan-quan-zhong-zui-hou-sheng-xia-de-shu-zi-lcof/)
 [Leetcode 4月每日一题合集](https://baihaoran.xyz/2020/04/01/Leetcode-DailyProblemCollection.html)
+
+**涉及知识点：约瑟夫问题**
 
 ## 1. 题目描述
 0, 1, ..., n-1 这 n 个数字排成一个圆圈，从数字 0 开始，每次从这个圆圈里删除第 m 个数字。求出这个圆圈里剩下的最后一个数字。

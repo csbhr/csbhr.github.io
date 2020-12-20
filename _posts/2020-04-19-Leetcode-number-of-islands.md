@@ -7,12 +7,12 @@ catalog: true
 background:
 tags:
     - Leetcode
-    - 图的遍历
-    - 并查集
 ---
 
 # 岛屿数量 [[Link]](https://leetcode-cn.com/problems/number-of-islands/)
 [Leetcode 4月每日一题合集](https://baihaoran.xyz/2020/04/01/Leetcode-DailyProblemCollection.html)
+
+**涉及知识点：图的遍历、并查集**
 
 ## 1. 题目描述
 给你一个由 `'1'`（陆地）和 `'0'`（水）组成的的二维网格，请你计算网格中岛屿的数量。

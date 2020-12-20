@@ -7,11 +7,12 @@ catalog: true
 background:
 tags:
     - Leetcode
-    - 动态规划
 ---
 
 # 鸡蛋掉落 [[Link]](https://leetcode-cn.com/problems/super-egg-drop/)
 [Leetcode 4月每日一题合集](https://baihaoran.xyz/2020/04/01/Leetcode-DailyProblemCollection.html)
+
+**涉及知识点：动态规划**
 
 ## 1. 题目描述
 你将获得 `K` 个鸡蛋，并可以使用一栋从 `1` 到 `N`  共有 `N` 层楼的建筑。

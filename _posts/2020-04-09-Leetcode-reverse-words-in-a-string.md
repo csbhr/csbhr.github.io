@@ -7,11 +7,12 @@ catalog: true
 background:
 tags:
     - Leetcode
-    - 确定有限状态机
 ---
 
 # 翻转字符串里的单词 [[Link]](https://leetcode-cn.com/problems/reverse-words-in-a-string/)
 [Leetcode 4月每日一题合集](https://baihaoran.xyz/2020/04/01/Leetcode-DailyProblemCollection.html)
+
+**涉及知识点：确定有限状态机**
 
 ## 1. 题目描述
 给定一个字符串，逐个翻转字符串中的每个单词。

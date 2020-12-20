@@ -7,11 +7,12 @@ catalog: true
 background:
 tags:
     - Leetcode
-    - 确定有限状态机
 ---
 
 # 字符串转换整数 (atoi) [[Link]](https://leetcode-cn.com/problems/string-to-integer-atoi/)
 [Leetcode 4月每日一题合集](https://baihaoran.xyz/2020/04/01/Leetcode-DailyProblemCollection.html)
+
+**涉及知识点：确定有限状态机**
 
 ## 1. 题目描述
 请你来实现一个 `atoi` 函数，使其能将字符串转换成整数。  
