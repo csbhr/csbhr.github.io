@@ -1,0 +1,142 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+    <title>CDVD-TSP</title>
+
+    <link rel="stylesheet" href="../css/normalize.css">
+    <link rel="stylesheet" href="../css/project-page.css">
+
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+  </head>
+  <body>
+    <div class="wrapper">
+      <h1 class="center">Cascaded Deep Video Deblurring Using Temporal Sharpness Prior</h1>
+
+      <p class="center">
+        <a href="https://jspan.github.io/" target="_blank">Jinshan Pan</a>,
+        <a href="https://baihaoran.xyz/about" target="_blank">Haoran Bai</a>,
+        and Jinhui Tang
+      </p>
+
+      <p class="center"><img src="https://s1.ax1x.com/2020/03/31/GQnfpt.png" alt="Figure 1. Deblurred result on a real challenging video."></p>
+
+      <h2>Abstract</h2>
+      <hr>
+      <p>
+        We present a simple and effective deep convolutional neural network (CNN) model for video deblurring. The proposed algorithm mainly consists of optical flow estimation from intermediate latent frames and latent frame restoration steps. It first develops a deep CNN model to estimate optical flow from intermediate latent frames and then restores the latent frames based on the estimated optical flow. To better explore the temporal information from videos, we develop a temporal sharpness prior to constrain the deep CNN model to help the latent frame restoration. We develop an effective cascaded training approach and jointly train the proposed CNN model in an end-to-end manner. We show that exploring the domain knowledge of video deblurring is able to make the deep CNN model more compact and efficient. Extensive experimental results show that the proposed algorithm performs favorably against state-of-the-art methods on the benchmark datasets as well as real-world videos.
+      </p>
+      <div class="fl m3">
+        <h4>Downloads</h4>
+        <ul>
+          <li><a href="https://arxiv.org/abs/2004.02501" target="_blank">Paper</a></li>
+          <li><a href="https://drive.google.com/drive/folders/1lw_1jITafEQ9DvMys_S6aYwtNApYKWsz?usp=sharing" target="_blank">Supplementary</a></li>
+          <li><a href="https://github.com/csbhr/CDVD-TSP" target="_blank">Code</a></li>
+        </ul>
+      </div>
+      <div class="fl m7">
+        <h4>Citation</h4>
+        <pre>@InProceedings{Pan_2020_CVPR,<br>  author = {Pan, Jinshan and Bai, Haoran and Tang, Jinhui},<br>  title = {Cascaded Deep Video Deblurring Using Temporal Sharpness Prior},<br>  booktitle = {IEEE/CVF Conference on Computer Vision and Pattern Recognition (CVPR)},<br>  month = {June},<br>  year = {2020}<br>}</pre>
+      </div>
+
+      <hr>
+
+      <h2>Proposed Algorithm</h2>
+      <hr>
+      <p class="center"><img src="https://s1.ax1x.com/2020/03/31/GQutu8.png" alt="Supp-Figure 1. An overview of the proposed method at one stage."></p>
+      <p>
+        The proposed algorithm contains the optical flow estimation module, latent image restoration module, and the temporal sharpness prior. For the optical flow estimation, we use the PWC-Net [5] to estimate optical flow. For the latent image restoration module, we use an encoder-decoder architecture based on [26]. However, we do not use the ConvLSTM module. Other network architectures are the same as [26].
+      </p>
+      <p>
+        To effectively train the proposed algorithm, we develop a cascaded training approach and jointly train the proposed model in an end-to-end manner. At each stage, it takes three adjacent frames estimated from the previous stage as the input and generates the deblurred results of the central frame. When handling every three adjacent frames, the proposed network shares the same network parameters.
+        The variables \( \tilde{I}_{i+1}(x) \) and \( \tilde{I}_{i-1}(x) \) denote the warped results of \( I_{i+1}(x+u_{i+1\rightarrow i}) \) and \( I_{i-1}(x+u_{i-1\rightarrow i}) \), respectively.
+      </p>
+      <h3>Temporal sharpness prior</h3>
+      <p>
+        As demonstrated in [4], the blur in the video is irregular, and thus there exist some pixels that are not blurred. Following the conventional method [4], we explore these sharpness pixels to help video deblurring. The sharpness prior is defined as:
+        \[ S_i(x) = exp(-\frac{1}{2} \sum_{j\&j\neq0}D(I_{i+j}(x+u_{i+j \rightarrow i}); I_i(x))) \tag{10} \]
+        where \( D(I_{i+j}(x+u_{i+j \rightarrow i}); I_i(x)) \) is defined as \( \left \| I_{i+j}(x+u_{i+j \rightarrow i} - I_i(x) \right \|^2 \).
+      </p>
+      <p>
+        Based on (10), if the value of \( S_i(x) \) is close to 1, the pixel \(x\) is likely to be clear. Thus, we can use \( S_i(x) \) to help the deep neural network to distinguish whether the pixel is clear or not so that it can help the latent frame restoration. To increase the robustness of \( S_i(x) \), we define \( D(.) \) as:
+        \[ D(I_{i+j}(x+u_{i+j \rightarrow i}); I_i(x)) = \sum_{y\in \omega(x)} \left \| I_{i+j}(x+u_{i+j \rightarrow i} - I_i(x) \right \|^2 \tag{11} \]
+        where \( \omega(x) \) denotes an image patch centerd at pixel \( x \).
+      </p>
+
+      <h2>Quantitative Results</h2>
+      <hr>
+      <p>
+        We further train the proposed method to convergence, and get higher PSNR/SSIM than the result reported in the paper.
+      </p>
+      <p>
+        Quantitative results on the benchmark dataset by Su et al. [24]. All the restored frames instead of randomly selected 30 frames from each test set [24] are used for evaluations. <em>Note that: Ours* is the result that we further trained to convergence, and Ours is the result reported in the paper.</em>
+      </p>
+      <p class='center'><img src="https://s1.ax1x.com/2020/03/31/GQOAv6.png" alt="Table 1. Quantitative evaluations on the video deblurring dataset [24] in terms of PSNR and SSIM."></p>
+      <p>
+        Quantitative results on the GOPRO dataset by Nah et al.[20].
+      </p>
+      <p class='center'><img src="https://s1.ax1x.com/2020/03/31/GQYZi8.png" alt="Table 2. Quantitative evaluations on the video deblurring dataset [20] in terms of PSNR and SSIM."></p>
+
+      <h2>Visual Comparisons</h2>
+      <hr>
+      <p>
+        Here are some visual comparisons with state-of-the-art methods. The proposed algorithm generates much clearer frames. More visual results are included in <a href="https://drive.google.com/drive/folders/1lw_1jITafEQ9DvMys_S6aYwtNApYKWsz?usp=sharing" target="_blank">supplementary materials</a>.
+      </p>
+      <p class='center'><img src="https://s1.ax1x.com/2020/03/31/GQt01g.png" alt="Figure 2. Deblurred results on the test dataset [24]."></p>
+      <p class='center'><img src="https://s1.ax1x.com/2020/03/31/GQtgA0.png" alt="Figure 3. Deblurred results on the test dataset [20]."></p>
+      <p class='center'><img src="https://s1.ax1x.com/2020/03/31/GQtf9U.png" alt="Figure 4. Deblurred results on a real video from [4]."></p>
+      <p class='center'><img src="https://s1.ax1x.com/2020/04/02/GJQ7aq.png" alt="Supp-Figure 8. Deblurred results on the test dataset [3]."></p>
+      <p class='center'><img src="https://s1.ax1x.com/2020/03/31/GQrpkj.png" alt="Supp-Figure 7. Deblurred results on the test dataset [4]."></p>
+      <p class='center'><img src="https://s1.ax1x.com/2020/03/31/GQD6YR.png" alt="Supp-Figure 6. Deblurred results on the test dataset [4]."></p>
+
+      <h2>Contact</h2>
+      <hr>
+      <p>If you have any question, please contact us by:</p>
+      <ul>
+        <li>E-mail: baihaoran@njust.edu.cn</li>
+        <li>Github Issue: https://github.com/csbhr/CDVD-TSP/issues</li>
+      </ul>
+
+      <h2>References</h2>
+      <hr>
+      <div>[1] Miika Aittala and Frédo Durand. Burst image deblurring using permutation invariant convolutional neural networks. In ECCV, pages 748–764, 2018. 2</div>
+      <div>[2] Leah Bar, Benjamin Berkels, Martin Rumpf, and Guillermo Sapiro. A variational framework for simultaneous motion estimation and restoration of motion-blurred video. In ICCV, pages 1–8, 2007. 1</div>
+      <div>[3] HuaijinChen, JinweiGu, OrazioGallo, Ming-YuLiu, Ashok Veeraraghavan, and Jan Kautz. Reblur2deblur: Deblurring videos via self-supervised learning. In ICCP, pages 1–9, 2018. 2</div>
+      <div>[4] Sunghyun Cho, Jue Wang, and Seungyong Lee. Video deblurring for hand-held cameras using patch-based synthesis. ACM TOG, 31(4):64:1–64:9, 2012. 1, 2, 4, 5, 7</div>
+      <div>[5] Shengyang Dai and Ying Wu. Motion from blur. In CVPR, 2008. 1, 2</div>
+      <div>[6] Jochen Gast and Stefan Roth. Deep video deblurring: The devil is in the details. In ICCV Workshop, 2019. 1, 2, 6</div>
+      <div><div>[7] Dong Gong, Jie Yang, Lingqiao Liu, Yanning Zhang, Ian D. Reid, Chunhua Shen, Anton van den Hengel, and Qinfeng Shi. From motion blur to motion flow: A deep learning solution for removing heterogeneous motion blur. In CVPR, pages 3806–3815, 2017. 2, 5, 6</div>
+      <div>[8] Kaiming He, Xiangyu Zhang, Shaoqing Ren, and Jian Sun. Delving deep into rectifiers: Surpassing human-level performance on imagenet classification. In ICCV, pages 1026–1034, 2015. 5</div>
+      <div>[9] Eddy Ilg, Nikolaus Mayer, Tonmoy Saikia, Margret Keuper, Alexey Dosovitskiy, and Thomas Brox. Flownet 2.0: Evolution of optical flow estimation with deep networks. In CVPR, pages 1647–1655, 2017. 8</div>
+      <div>[10] Max Jaderberg, Karen Simonyan, Andrew Zisserman, and Koray Kavukcuoglu. Spatial transformer networks. In NeurIPS, pages 2017–2025, 2015. 2</div>
+      <div>[11] Tae Hyun Kim and Kyoung Mu Lee. Segmentation-free dynamic scene deblurring. In CVPR, pages 2766–2773, 2014. 1, 2</div>
+      <div>[12] Tae Hyun Kim and Kyoung Mu Lee. Generalized video deblurring for dynamic scenes. In CVPR, pages 5426–5434, 2015. 1, 2, 3, 5, 6, 7</div>
+      <div>[13] Tae Hyun Kim, Kyoung Mu Lee, Bernhard Schölkopf, and Michael Hirsch. Online video deblurring via dynamic temporal blending network. In ICCV, pages 4058–4067, 2017. 1, 2, 5, 6, 7</div>
+      <div>[14] Tae Hyun Kim, Mehdi S. M. Sajjadi, Michael Hirsch, and Bernhard Schölkopf. Spatio-temporal transformer network for video restoration. In ECCV, pages 111–127, 2018. 2, 5</div>
+      <div>[15] Diederik P. Kingma and Jimmy Ba. Adam: A method for stochastic optimization. In ICLR, 2015. 5</div>
+      <div>[16] Yunpeng Li, Sing Bing Kang, Neel Joshi, Steven M. Seitz, and Daniel P. Huttenlocher. Generating sharp panoramas from motion-blurred videos. In CVPR, pages 2424–2431, 2010. 2</div>
+      <div>[17] Xiao-Jiao Mao, Chunhua Shen, and Yu-Bin Yang. Image restoration using very deep convolutional encoder-decoder networks with symmetric skip connections. In NeurIPS, pages 2802–2810, 2016. 2</div>
+      <div>[18] Yasuyuki Matsushita, Eyal Ofek, Weina Ge, Xiaoou Tang, and Heung-Yeung Shum. Full-frame video stabilization with motion inpainting. IEEE TPAMI, 28(7):1150–1163, 2006. 2</div>
+      <div>[19] Ben Mildenhall, Jonathan T. Barron, Jiawen Chen, Dillon Sharlet, Ren Ng, and Robert Carroll. Burst denoising with kernel prediction networks. In CVPR, pages 2502–2510, 2018. 2</div>
+      <div>[20] Seungjun Nah, Tae Hyun Kim, and Kyoung Mu Lee. Deep multi-scale convolutional neural network for dynamic scene deblurring. In CVPR, pages 257–265, 2017. 5, 6, 7</div>
+      <div>[21] Seungjun Nah, Sanghyun Son, and Kyoung Mu Lee. Recurrent neural networks with intra-frame iterations for video deblurring. In CVPR, pages 8102–8111, 2019. 5, 7</div>
+      <div>[22] Jinshan Pan, Deqing Sun, Hanspeter Pfister, and MingHsuanYang. Deblurringimagesviadarkchannelprior. IEEE TPAMI, 40(10):2315–2328, 2018. 5, 7</div>
+      <div>[23] Deepak Pathak, Philipp Krähenbühl, Jeff Donahue, Trevor Darrell, and Alexei A. Efros. Context encoders: Feature learning by inpainting. In CVPR, pages 2536–2544, 2016. 2</div>
+      <div>[24] Shuochen Su, Mauricio Delbracio, Jue Wang, Guillermo Sapiro, Wolfgang Heidrich, and Oliver Wang. Deep video deblurring for hand-held cameras. In CVPR, pages 237–246, 2017. 1, 2, 4, 5, 6, 7, 8</div>
+      <div>[25] Deqing Sun, Xiaodong Yang, Ming-Yu Liu, and Jan Kautz. PWC-Net: CNNs for optical flow using pyramid, warping, and cost volume. In CVPR, pages 8934–8943, 2018. 3, 4, 5</div>
+      <div>[26] Xin Tao, Hongyun Gao, Xiaoyong Shen, Jue Wang, and Jiaya Jia. Scale-recurrent network for deep image deblurring. In CVPR, pages 8174–8182, 2018. 4, 5, 6, 7</div>
+      <div>[27] Xintao Wang, Kelvin C.K. Chan, Ke Yu, Chao Dong, and Chen Change Loy. EDVR: Video restoration with enhanced deformable convolutional networks. In CVPR Workshops, 2019. 1, 2, 5, 6, 7, 8</div>
+      <div>[28] Patrick Wieschollek, Michael Hirsch, Bernhard Schölkopf, and Hendrik P. A. Lensch. Learning blind motion deblurring. In ICCV, pages 231–240, 2017. 2, 7</div>
+      <div>[29] Jonas Wulff and Michael Julian Black. Modeling blurred video with layers. In ECCV, pages 236–252, 2014. 1, 2</div>
+      <div>[30] Rui Xu, Xiaoxiao Li, Bolei Zhou, and Chen Change Loy. Deep flow-guided video inpainting. In CVPR, pages 37233732, 2019. 5</div>
+      <div>[31] Kaihao Zhang, Wenhan Luo, Yiran Zhong, Lin Ma, Wei Liu, and Hongdong Li. Adversarial spatio-temporal learning for video deblurring. IEEE TIP, 28(1):291–301, 2019. 1, 2</div>
+      <div>[32] Shangchen Zhou, Jiawei Zhang, Jinshan Pan, Haozhe Xie, Wangmeng Zuo, and Jimmy Ren. Spatio-temporal filter adaptive network for video deblurring. In ICCV, 2019. 1, 2, 5, 6, 7, 8</div>
+      <div>[33] Daniel Zoran and Yair Weiss. From learning models of naturalimagepatchestowholeimagerestoration. InICCV,pages 479–486, 2011. 2</div>
+
+    </div>
+
+  </body>
+</html>
