@@ -35,7 +35,7 @@ pre {
 .wrapper {
   width:900px;
   margin:0 auto;
-  padding-top:30px;
+  padding-top:20px;
   padding-bottom:80px;
   padding-left:30px;
   padding-right:30px;
@@ -119,6 +119,5 @@ pre {
 }
 
 .top-name {
-  padding-top: 5px;
   padding-button: 5px;
 }
