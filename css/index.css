@@ -35,8 +35,10 @@ pre {
 .wrapper {
   width:900px;
   margin:0 auto;
-  padding-top:20px;
+  padding-top:30px;
   padding-bottom:80px;
+  padding-left:30px;
+  padding-right:30px;
 }
 
 .module {
