@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel="icon" href="https://s1.ax1x.com/2022/12/14/zIJmHH.png" type="image/x-icon">
+    <title>智能画质增强系统</title>
+    <!-- Tell the browser to be responsive to screen width -->
+    <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
+
+    <link href="./assets/bootstrap.min.css" rel="stylesheet">
+    <link href="./assets/bootstrap-slider.min.css" rel="stylesheet">
+    <link href="./assets/noty.css" rel="stylesheet">
+
+    <script src="./assets/jquery.min.js"></script>
+    <script src="./assets/jquery-ui.js"></script>
+    <script src="./assets/jquery.resize.js"></script>
+    <link href="./assets/jquery-ui.css" rel="stylesheet">
+    <script src="./assets/bootstrap.min.js"></script>
+    <script src="./assets/bootstrap-slider.min.js"></script>
+    <script src="./assets/noty.min.js"></script>
+    <script src="./assets/ImageResizer.js"></script>
+    <script src="./assets/SimpleImage.js"></script>
+    <script src="./assets/download.min.js"></script>
+    <script src="./assets/jquery.event.move.js"></script>
+    <script src="./assets/jquery.twentytwenty.js"></script>
+    <link href="./assets/twentytwenty.css" rel="stylesheet">
+
+    <link href="./assets/product.css" rel="stylesheet">
+    <link href="./assets/result.css" rel="stylesheet">
+    <link href="./assets/web.css" rel="stylesheet">
+
+    <link href="./assets/bootstrap.css" rel="stylesheet">
+    <link href="./assets/animate.min.css" rel="stylesheet">
+    <link href="./assets/animate.rsnet.css" rel="stylesheet">
+    <link href="./assets/font-awesome.min.css" rel="stylesheet">
+    <link href="./assets/common.css" rel="stylesheet">
+    <script src="./assets/bootstrap.js"></script>
+    <script src="./assets/bootstrap-hover-dropdown.min.js"></script>
+    <script src="./assets/common.js"></script>
+
+    <link href="./assets/image.css" rel="stylesheet">
+    <script src="./assets/bhr_image_slider.js"></script>
+</head>
+
+<body>
+    <div id="header"><nav class="navbar-fixed-top navIVstyle on", style="background:#000000">
+    <div class="container-fluid">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <!-- <div class="navbar-header" style="z-index:999;">
+            <div class="img-box logo">
+                <a href="https://imag-njust.net/" target="_blank">
+                    <img class="img-responsive" src="https://s1.ax1x.com/2022/12/14/zIJmHH.png" alt="logo">
+                </a>
+                智能画质增强系统
+            </div>
+        </div> -->
+
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+            <ul class="nav navbar-nav navbar-left">
+                <li class="firstThree dropdown", style="color:#FFFFFF">
+                    <a href="https://imag-njust.net/" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false", target="_blank">
+                        IMAG - 智能画质增强系统 <b class="underline"></b>
+                    </a>
+                </li>
+            </ul>
+
+            <ul class="nav navbar-nav navbar-right">
+                <li class="firstThree dropdown", style="color:#FFFFFF">
+                    <a href="./index.html" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
+                        首页 <b class="underline"></b>
+                    </a>
+                </li>
+
+                <li class="firstThree dropdown", style="color:#FFFFFF">
+                    <a href="./deblur.html" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
+                        去模糊 <b class="underline"></b>
+                    </a>
+                </li>
+
+                <li class="firstThree dropdown", style="color:#FFFFFF">
+                    <a href="./sr.html" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
+                        超分辨率 <b class="underline"></b>
+                    </a>
+                </li>
+
+                <li class="firstThree dropdown", style="color:#FFFFFF">
+                    <a href="./dehaze.html" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
+                        去雾 <b class="underline"></b>
+                    </a>
+                </li>
+
+                <li class="firstThree dropdown", style="color:#FFFFFF">
+                    <a href="./facerec.html" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
+                        人脸增强与识别 <b class="underline"></b>
+                    </a>
+                </li>
+            </ul>
+        </div><!-- /.navbar-collapse -->
+    </div><!-- /.container-fluid -->
+    </div>
+
+    <section class="experience info-wrap col-xs-12 col-md-8 col-md-offset-2">
+        <p class="description"></p>
+        <h2 class="title" id="selectedTask">去模糊</h2>
+        <p class="description">
+            功能介绍：对拍摄到的模糊图像进行清晰化处理，去除模糊，还原清晰的图像。<br>
+            首先点击蓝色图片按钮，上传图片。等待片刻，就会显示处理结果图。
+        </p>
+
+        <div class="upload-wrap">
+            <!-- <div class="file-input clearfix">
+                <input class="hidden" id="fileupload1" onchange="jsReadFiles(this.files)" type="file" name="file" accept=".png,.jpg,.jpeg,.bmp,.webp">
+            </div> -->
+            <div class="uploadWrap col-xs-12 col-md-4 col-md-offset-1">
+                <div id="fileList" class="hidden">
+                    <div class="file-thumbnail">
+                        <div class="file-preview">
+                            <div class="loading"><span></span></div>
+                        </div>
+                    </div>
+                </div>
+                <div id="fileContainer" class="fileBox cleafix">
+                    <div id="filePlaceholder" style="height: 100%;">
+                        <div>
+                            <img src="./assets/uploadImage.png">
+                            <p>拖拽图片到此区域，或直接<span>点击上传</span></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="demo-box col-xs-12 col-md-5 col-md-offset-1">
+                <div class="demo-img-box col-xs-4">
+                    <div>
+                        <img src="./assets/deblur/1.jpg" res="./assets/deblur/1-res.png" onclick="img_demo_deal(this)">
+                    </div>
+                    <p onclick="$(this).parent().find('img').click()">Demo 1</p>
+                </div>
+                <div class="demo-img-box col-xs-4">
+                    <div>
+                        <img src="./assets/deblur/2.jpg" res="./assets/deblur/2-res.png" onclick="img_demo_deal(this)">
+                    </div>
+                    <p onclick="$(this).parent().find('img').click()">Demo 2</p>
+                </div>
+                <div class="demo-img-box col-xs-4">
+                    <div>
+                        <img src="./assets/deblur/3.jpg" res="./assets/deblur/3-res.png" onclick="img_demo_deal(this)">
+                    </div>
+                    <p onclick="$(this).parent().find('img').click()">Demo 3</p>
+                </div>
+                <div class="demo-img-box col-xs-4">
+                    <div>
+                        <img src="./assets/deblur/4.jpg" res="./assets/deblur/4-res.png" onclick="img_demo_deal(this)">
+                    </div>
+                    <p onclick="$(this).parent().find('img').click()">Demo 4</p>
+                </div>
+                <div class="demo-img-box col-xs-4">
+                    <div>
+                        <img src="./assets/deblur/5.jpg" res="./assets/deblur/5-res.png" onclick="img_demo_deal(this)">
+                    </div>
+                    <p onclick="$(this).parent().find('img').click()">Demo 5</p>
+                </div>
+            </div>
+        </div>
+
+        <div id="twentytwenty_box"></div>
+        
+        <p class="description"></p>
+    </section>
+
+
+    <div id="footer"><footer class="public-footer">
+    <div class="container">
+        <p class="footer-text align-cm">
+            Copyright © 2022 南京理工大学智能媒体分析实验室. All rights reserved.
+        </p>
+        <div class="col-xs-12 col-sm-12 col-lg-12 copyright"></div>
+    </div>
+    </div>
+
+</body></html>

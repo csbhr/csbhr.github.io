@@ -1,0 +1,283 @@
+.banner .banner-wrap {
+    margin: 150px 0 90px;
+}
+
+.c-data label {
+    background: #2E7BF4;
+    color: white;
+}
+
+.start-use {
+    text-decoration: none;
+    position: relative;
+    padding: 12px 25px;
+    border: 1px solid #fff;
+    color: #fff;
+    z-index: 1;
+    -webkit-transition: all .3s ease;
+    -moz-transition: all .3s ease;
+    transition: all .3s ease;
+    min-width: 116px;
+    -webkit-border-radius: 0;
+    -moz-border-radius: 0;
+    border-radius: 0;
+    margin: 0 15px;
+    font-size: 16px;
+    height: 38px;
+    line-height: 38px;
+}
+
+.start-use:hover {
+    color: #333;
+    background: #fff;
+    -moz-box-shadow: none;
+    box-shadow: none;
+    text-decoration: none;
+}
+
+.img-type {
+    width: 1200px;
+    margin: 0 auto;
+    text-align: center;
+}
+.img-type div {
+    display: inline-block;
+    width: 350px;
+    height: 250px;
+    margin: 0 10px;
+    background-size: 100% auto;
+}
+.img-type div:after {
+    content: "";
+    width: 350px;
+    height: 250px;
+    position: relative;
+    display: inline-block;
+    left: 0;
+    top: 0;
+    background-position: center;
+}
+.img-type-girl-1 {
+    background: url("/images/web/adultImage/girl_1.png");
+}
+.img-type-girl-1:after {
+    background: url("/images/web/adultImage/type_1.png") no-repeat;
+}
+.img-type-girl-2 {
+    background: url("/images/web/adultImage/girl_2.png");
+}
+.img-type-girl-2:after {
+    background: url("/images/web/adultImage/type_2.png") no-repeat;
+}
+.img-type-girl-3 {
+    background: url("/images/web/adultImage/girl_3.png");
+}
+.img-type-girl-3:after {
+    background: url("/images/web/adultImage/type_3.png") no-repeat;
+}
+
+.info-wrap {
+    margin-top: 60px;
+}
+.info-wrap-div {
+    background: #F8F9FA;
+    overflow: hidden;
+    margin-top: 40px;
+}
+.info-wrap-div .item {
+    background: #FFF;
+    text-align: left;
+    overflow: hidden;
+}
+.info-wrap-div .item .item-head {
+    font-size: 16px;
+}
+.info-wrap-div .item .item-text {
+    color: #6F747A;
+    margin-top: 20px;
+}
+.info-wrap img {
+    max-height: 100%;
+}
+
+.uploadWrap {
+    margin-top: 10px;
+    cursor: pointer;
+}
+
+.fileBox {
+    padding: 10px;
+    height: 320px;
+    overflow: hidden;
+}
+
+.file-thumbnail {
+    width: 100%;
+    height: 100%;
+    margin: 0;
+}
+
+.file-preview {
+    height: 100%;
+    display: flex;
+    justify-content:center;
+    align-items:Center;
+}
+
+.file-preview canvas {
+    max-width: 100%;
+    max-height: 100%;
+}
+
+.check-result {
+    margin-top: 10px;
+    /*height: 300px;*/
+    background: #F8F9FA;
+}
+
+.check-result-img {
+}
+
+.upload-wrap {
+    overflow: hidden;
+}
+
+.zoom-slider-div {
+    overflow: hidden;
+    margin-top: 20px;
+}
+#custom-handle {
+    width: 3em;
+    height: 1.6em;
+    top: 50%;
+    margin-top: -.8em;
+    text-align: center;
+    line-height: 1.6em;
+}
+
+.loading {
+    z-index: 999;
+    background: rgba(0, 0, 0, 0.3);
+    color: #FFF;
+}
+
+.demo-box {
+    margin-top: 10px;
+}
+.demo-img-box {
+    margin: 10px 0;
+}
+.demo-img-box div {
+    width: 100px;
+    height: 100px;
+    overflow: hidden;
+    margin: 0 auto;
+    border-radius: 10px;
+}
+.demo-img-box img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    cursor: pointer;
+}
+.demo-img-box p {
+    color: #2983fb;
+    border: 1px solid #2983fb;
+    padding: 5px 10px;
+    border-radius: 10px;
+    margin: 10px 0 0 0;
+    cursor: pointer;
+}
+.demo-img-box p:hover {
+    background: #2983fb;
+    color: #FFF;
+}
+.demo-img-box-2 img {
+    max-width: inherit;
+    max-height: 100%;
+}
+
+
+.index-box  {
+    margin-bottom: 50px;
+    margin-left: 30px;
+    margin-right: 30px;
+    padding: 20px;
+    border-style: inset;
+    font-size: 16px;
+}
+
+.index-box span  {
+    font-size: 24px;
+    line-height: 20px;
+    margin-bottom: 50px;
+}
+
+.twentytwenty-container {
+    max-width: 100%;
+    height: 600px;
+    text-align: center;
+    margin: 0 auto;
+    border-radius: 10px;
+}
+.twentytwenty-horizontal .twentytwenty-before-label:before, .twentytwenty-horizontal .twentytwenty-after-label:before {
+    top: 0;
+    margin-top: 10px;
+    border-radius: 5px;
+}
+.twentytwenty-btn-div {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+}
+.twentytwenty-btn-box {
+    padding: 10px;
+    height: 40px;
+    overflow: hidden;
+}
+.twentytwenty-btn {
+    background: rgba(255, 255, 255, 0.2);
+    line-height: 38px;
+    padding: 0 10px;
+    cursor: pointer;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    border-radius: 5px;
+    color: #FFF;
+}
+.twentytwenty-btn-left {
+    float: left;
+    margin-right: 10px;
+}
+.twentytwenty-btn-right {
+    float: right;
+    margin-left: 10px;
+}
+.twentytwenty-container img {
+    max-height: initial;
+    align-self: flex-start;
+    flex-shrink: 0;
+    width: 100%;
+}
+#twentytwenty_box > .description {
+    margin: 20px 0;
+    font-size: 16px;
+    color: #6F747A;
+}
+.twentytwenty-select-ul {
+    margin-top: 20px;
+}
+.twentytwenty-select-li {
+    margin: 10px 0;
+    border-radius: 100%;
+    overflow: hidden;
+    cursor: pointer;
+}
+.twentytwenty-select-li.active {
+    border: 3px solid #3685FF;
+}
+.twentytwenty-select-li img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
