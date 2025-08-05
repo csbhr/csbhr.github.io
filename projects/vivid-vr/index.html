@@ -1,0 +1,615 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="description"
+        content="Vivid-VR.">
+  <meta name="keywords" content="Video Super-Resolution">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Vivid-VR</title>
+
+  <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro"
+        rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+
+  <link rel="stylesheet" href="./static/css/bulma.min.css">
+  <link rel="stylesheet" href="./static/css/bulma-carousel.min.css">
+  <link rel="stylesheet" href="./static/css/bulma-slider.min.css">
+  <link rel="stylesheet" href="./static/css/fontawesome.all.min.css">
+  <link rel="stylesheet"
+        href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+  <link rel="stylesheet" href="./static/css/index.css">
+  <!-- <link rel="icon" href="./images/logo.svg"> -->
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script defer src="./static/js/fontawesome.all.min.js"></script>
+  <script src="./static/js/bulma-carousel.min.js"></script>
+  <script src="./static/js/bulma-slider.min.js"></script>
+  <script src="./static/js/index.js"></script>
+
+  <!-- Vendor Stylesheets -->
+  <!--=================js==========================-->
+  <link rel="stylesheet" href="./static/css/tab_gallery.css">
+  <link rel="stylesheet" href="./static/css/juxtapose.css">
+  <!-- <script src="./static/js/index.js"></script> -->
+  <!-- <link rel="stylesheet" href="./menlo"> -->
+  <link rel="stylesheet" href="./static/css/image_card_fader.css">
+  <link rel="stylesheet" href="./static/css/image_card_slider.css">
+
+  <!-- custom css file  -->
+  <link rel="stylesheet" href="./static/css/style.css">
+  <link rel="stylesheet" href="./static/css/twentytwenty.css">
+
+  <style>
+  .gradient-text {
+    background: linear-gradient(90deg, #ff7e5f, #feb47b, #ffcc70);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    font-weight: bold;
+  }
+  </style>
+
+</head>
+<body>
+
+
+<section class="hero">
+  <div class="hero-body">
+    <div class="container is-max-desktop">
+      <div class="columns is-centered">
+        <div class="column has-text-centered">
+          <h1 class="title is-1 publication-title"><span class="gradient-text">Vivid-VR:</span> Distilling Concepts from Diffusion Transformer for Photorealistic Video Restoration</h1>
+          <div class="is-size-5 publication-authors">
+            <span class="author-block">
+              <a href="https://csbhr.github.io/">Haoran Bai</a>,&nbsp
+            </span>
+            <span class="author-block">
+              <a href="#">Xiaoxu Chen</a>,&nbsp
+            </span>
+            <span class="author-block">
+              <a href="#">Canqian Yang</a>,&nbsp
+            </span>
+            <span class="author-block">
+              <a href="#">Zongyao He</a>,&nbsp
+            </span>
+            <span class="author-block">
+              <a href="#">Sibin Deng</a>,&nbsp
+            </span>
+            <span class="author-block">
+              <a href="https://scholar.google.com/citations?user=NpTmcKEAAAAJ&hl=en">Ying Chen</a><sup>*</sup>
+            </span>
+          </div>
+
+          <div class="is-size-5 publication-authors">
+            <span class="author-block">Alibaba Group - Taobao & Tmall Group</span><br>
+            <span class="author-block"><sup>* Corresponding author</sup></span>
+          </div>
+
+          <div class="column has-text-centered">
+            <div class="publication-links">
+              <!-- PDF Link. -->
+              <span class="link-block">
+                <a href="#"
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="fas fa-file-pdf"></i>
+                  </span>
+                  <span>Paper (Coming Soon!)</span>
+                </a>
+              </span>
+              <!-- <span class="link-block">
+                <a href="#"
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="ai ai-arxiv"></i>
+                  </span>
+                  <span>arXiv</span>
+                </a>
+              </span> -->
+              <!-- Code Link. -->
+              <span class="link-block">
+                <a href="https://github.com/csbhr/Vivid-VR"
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="fab fa-github"></i>
+                  </span>
+                  <span>Code</span>
+                  </a>
+              </span>
+              <!-- Dataset Link. -->
+            </div>
+          </div>
+
+          <div class="is-size-5 notes">
+            <p style="color: #ec2222;">This webpage contains multiple ultra-high-definition videos, and they may load slowly.</p>
+            <p style="color: #ec2222;">Please be patient, thanks!</p>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+
+<!-- first row -->
+<section class="hero is-light is-small">
+  <div class="hero-body">
+    <div class="container">
+      <div id="results-carousel" class="carousel results-carousel">
+
+
+        <div class="item">
+          <div class="twentytwenty-container" data-orientation="horizontal" ratio="0.5384">
+            <div class="desc">AIGC</div>
+            <div class="video">
+              <video muted autoplay="autoplay" loop="loop" width="60%">
+                <source src="assets/videos-teaser/demo2_input.mp4" type="video/mp4">
+              </video> 
+            </div>
+            <div class="video">
+              <video muted autoplay="autoplay" loop="loop" width="60%">
+                <source src="assets/videos-teaser/demo2_vividvr.mp4" type="video/mp4">
+              </video>
+            </div>
+          </div>
+        </div>
+
+        <div class="item">
+          <div class="twentytwenty-container" data-orientation="horizontal" ratio="0.5384">
+            <div class="desc">AIGC</div>
+            <div class="video">
+              <video muted autoplay="autoplay" loop="loop" width="60%">
+                <source src="assets/videos-teaser/demo3_input.mp4" type="video/mp4">
+              </video> 
+            </div>
+            <div class="video">
+              <video muted autoplay="autoplay" loop="loop" width="60%">
+                <source src="assets/videos-teaser/demo3_vividvr.mp4" type="video/mp4">
+              </video>
+            </div>
+          </div>
+        </div>
+
+        <div class="item">
+          <div class="twentytwenty-container" data-orientation="horizontal" ratio="0.5384">
+            <div class="desc">AIGC</div>
+            <div class="video">
+              <video muted autoplay="autoplay" loop="loop" width="60%">
+                <source src="assets/videos-teaser/demo4_input.mp4" type="video/mp4">
+              </video> 
+            </div>
+            <div class="video">
+              <video muted autoplay="autoplay" loop="loop" width="60%">
+                <source src="assets/videos-teaser/demo4_vividvr.mp4" type="video/mp4">
+              </video>
+            </div>
+          </div>
+        </div>
+
+        <div class="item">
+          <div class="twentytwenty-container" data-orientation="horizontal" ratio="0.5384">
+            <div class="desc">AIGC</div>
+            <div class="video">
+              <video muted autoplay="autoplay" loop="loop" width="60%">
+                <source src="assets/videos-teaser/demo1_input.mp4" type="video/mp4">
+              </video> 
+            </div>
+            <div class="video">
+              <video muted autoplay="autoplay" loop="loop" width="60%">
+                <source src="assets/videos-teaser/demo1_vividvr.mp4" type="video/mp4">
+              </video>
+            </div>
+          </div>
+        </div>
+
+        <div class="item">
+          <div class="twentytwenty-container" data-orientation="horizontal" ratio="0.5384">
+            <div class="desc">Real-world</div>
+            <div class="video">
+              <video muted autoplay="autoplay" loop="loop" width="60%">
+                <source src="assets/videos-teaser/demo5_input.mp4" type="video/mp4">
+              </video> 
+            </div>
+            <div class="video">
+              <video muted autoplay="autoplay" loop="loop" width="60%">
+                <source src="assets/videos-teaser/demo5_vividvr.mp4" type="video/mp4">
+              </video>
+            </div>
+          </div>
+        </div>
+
+        <div class="item">
+          <div class="twentytwenty-container" data-orientation="horizontal" ratio="0.5384">
+            <div class="desc">Real-world</div>
+            <div class="video">
+              <video muted autoplay="autoplay" loop="loop" width="60%">
+                <source src="assets/videos-teaser/demo6_input.mp4" type="video/mp4">
+              </video> 
+            </div>
+            <div class="video">
+              <video muted autoplay="autoplay" loop="loop" width="60%">
+                <source src="assets/videos-teaser/demo6_vividvr.mp4" type="video/mp4">
+              </video>
+            </div>
+          </div>
+        </div>
+
+        <div class="item">
+          <div class="twentytwenty-container" data-orientation="horizontal" ratio="0.5384">
+            <div class="desc">Real-world</div>
+            <div class="video">
+              <video muted autoplay="autoplay" loop="loop" width="60%">
+                <source src="assets/videos-teaser/demo7_input.mp4" type="video/mp4">
+              </video> 
+            </div>
+            <div class="video">
+              <video muted autoplay="autoplay" loop="loop" width="60%">
+                <source src="assets/videos-teaser/demo7_vividvr.mp4" type="video/mp4">
+              </video>
+            </div>
+          </div>
+        </div>
+
+        <div class="item">
+          <div class="twentytwenty-container" data-orientation="horizontal" ratio="0.5384">
+            <div class="desc">Real-world</div>
+            <div class="video">
+              <video muted autoplay="autoplay" loop="loop" width="60%">
+                <source src="assets/videos-teaser/demo8_input.mp4" type="video/mp4">
+              </video> 
+            </div>
+            <div class="video">
+              <video muted autoplay="autoplay" loop="loop" width="60%">
+                <source src="assets/videos-teaser/demo8_vividvr.mp4" type="video/mp4">
+              </video>
+            </div>
+          </div>
+        </div>
+
+      </div>
+  </div>
+</section>
+
+
+<section class="section">
+  <div class="container is-max-desktop">
+    <!-- Abstract. -->
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+      <!-- <div class="column"> -->
+        <h2 class="title is-3">Abstract</h2>
+        <div class="content has-text-justified">
+          <p>
+            We present Vivid-VR, a generative video restoration method built upon an advanced DiT-based T2V model (i.e., CogVideoX1.5-5B), where ControlNet is leveraged to control the generation process, ensuring content consistency.
+            Limited by training data diversity and multimodal alignment, fine-tuning the controllable generation pipeline often leads to drift, degrading texture realism and temporal coherence in the output.
+            To tackle this challenge, we propose a concept distillation training strategy that leverages the T2V base model to synthesize training samples with embedded textual concepts, thereby distilling its conceptual understanding to preserve texture and temporal quality.
+            For more effective control, we design an adaptive feature modulation mechanism, comprising a control feature projector and a new ControlNet connector, which not only enable precise control but also filters out low-quality input features to mitigate their adverse effects.
+            Furthermore, we introduce a mutually exclusive fusion-based aggregation sampling strategy to resolve boundary artifacts in DiT's aggregated sampling, enabling high-resolution video inference with controllable memory usage.
+            Extensive experiments show that Vivid-VR performs favorably against existing approaches on both synthetic and real-world benchmarks, as well as in AIGC videos, achieving impressive texture realism, visual vividness, and temporal consistency.
+          </p>
+        </div>
+      </div>
+    </div>
+    <!--/ Abstract. -->
+  </div>
+</section>
+
+  
+<section class="section">
+  <div class="container is-max-desktop">
+    <div class="columns is-centered has-text-centered">
+      <!-- <div class="column is-four-fifths"> -->
+      <div class="column">
+        <h2 class="title is-3">Method</h2>
+        <div class="content has-text-justified">
+          <p>
+            Given a low-quality input video, Vivid-VR first generates a text description using CogVLM2-Video and encodes it into text tokens via the T5 encoder.
+            Simultaneously, the input video is encoded into video latent by the 3D VAE encoder, which is further processed by the proposed control feature projector to remove low-quality features.
+            The video latent is then patchified and noise is added to produce visual tokens.
+            The text tokens, visual tokens, and timestep are fed into DiT and ControlNet.
+            To improve controllability, we design a two-branch connector: one branch uses an MLP for feature mapping, while the other branch employs the cross-attention mechanism to dynamically retrieve the most relevant control features, enabling adaptive alignment with the input video during generation.
+            After T denoising steps, the denoised latent is decoded by the 3D VAE to generate the final high-quality video.
+            The control feature projector, ControlNet, and connectors are trained using the proposed concept distillation training strategy, and the remaining parameters are frozen.
+          </p>
+          <div class="column">
+            <img src="assets/framework.png" />
+          </div>
+        </div>
+        <!-- Paper video. -->
+          <!-- <div class="column">
+            <h2 class="title is-3">Results</h2>
+            <div class="column">
+              <img src="./images/result1.png" />
+            </div>
+            <div class="column">
+              <img src="./images/result2.png" />
+            </div>
+          </div> -->
+
+      </div>
+    </div>
+  </div>
+</section>
+
+
+  
+<section class="section">
+  <div class="container is-max-desktop">
+    <div class="columns is-centered has-text-centered">
+      <!-- <div class="column is-four-fifths"> -->
+      <div class="column">
+        <h2 class="title is-3">Quantitative results</h2>
+
+
+        <div class="content has-text-justified">
+          <p>
+            To better evaluate the proposed method, we propose two testsets, named UGC50 and AIGC50, which contain 50 real-world UGC videos and 50 AIGC videos respectively. You can download these two testsets from this <a href="#">[link]</a>.
+          </p>
+          <p>
+            For synthetic testsets, we employ full-reference metrics (PSNR, SSIM, LPIPS, and DISTS) and no-reference metrics (NIQE, CLIP-IQA, MUSIQ, DOVER, and MD-VQA). For real-world and AIGC testset, we only adopt no-reference metrics due to the absence of ground truth. Experimental results show that Vivid-VR achieves almost the best results on no-reference metrics.
+          </p>
+          <div class="column">
+            <img src="assets/quantitative-results.jpg" />
+          </div>
+        </div>
+
+
+      </div>
+    </div>
+  </div>
+</section>
+
+
+
+  
+<section class="section">
+  <div class="container is-max-desktop">
+    <div class="columns is-centered has-text-centered">
+      <!-- <div class="column is-four-fifths"> -->
+      <div class="column">
+        <h2 class="title is-3">Qualitative results</h2>
+
+
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<section class="hero is-light is-small">
+  <div class="hero-body">
+    <div class="container">
+
+      <div class="columns is-centered has-text-centered title is-5">Real-world videos</div>
+      <div id="results-carousel" class="carousel results-carousel">
+        <div class="item item-steve">
+          <video poster="" id="steve" autoplay controls muted loop playsinline height="100%">
+            <source src="assets/videos-sotas/video_demo_ugc50_3.mp4"
+                    type="video/mp4">
+          </video>
+        </div>
+        <div class="item item-chair-tp">
+          <video poster="" id="chair-tp" autoplay controls muted loop playsinline height="100%">
+            <source src="assets/videos-sotas/video_demo_ugc50_4.mp4"
+                    type="video/mp4">
+          </video>
+        </div>
+        <div class="item item-chair-tp">
+          <video poster="" id="chair-tp" autoplay controls muted loop playsinline height="100%">
+            <source src="assets/videos-sotas/video_demo_ugc50_5.mp4"
+                    type="video/mp4">
+          </video>
+        </div>
+        <div class="item item-chair-tp">
+          <video poster="" id="chair-tp" autoplay controls muted loop playsinline height="100%">
+            <source src="assets/videos-sotas/video_demo_ugc50_6.mp4"
+                    type="video/mp4">
+          </video>
+        </div>
+        <div class="item item-chair-tp">
+          <video poster="" id="chair-tp" autoplay controls muted loop playsinline height="100%">
+            <source src="assets/videos-sotas/video_demo_ugc50_7.mp4"
+                    type="video/mp4">
+          </video>
+        </div>
+        <div class="item item-chair-tp">
+          <video poster="" id="chair-tp" autoplay controls muted loop playsinline height="100%">
+            <source src="assets/videos-sotas/video_demo_videolq_1.mp4"
+                    type="video/mp4">
+          </video>
+        </div>
+        <div class="item item-steve">
+          <video poster="" id="steve" autoplay controls muted loop playsinline height="100%">
+            <source src="assets/videos-sotas/video_demo_ugc50_1.mp4"
+                    type="video/mp4">
+          </video>
+        </div>
+        <div class="item item-chair-tp">
+          <video poster="" id="chair-tp" autoplay controls muted loop playsinline height="100%">
+            <source src="assets/videos-sotas/video_demo_ugc50_9.mp4"
+                    type="video/mp4">
+          </video>
+        </div>
+      </div>
+
+
+      <br><br>
+
+      <div class="columns is-centered has-text-centered title is-5">AIGC videos</div>
+      <div id="results-carousel" class="carousel results-carousel">
+        <div class="item item-steve">
+          <video poster="" id="steve" autoplay controls muted loop playsinline height="100%">
+            <source src="assets/videos-sotas/video_demo_seedvrdemo7_1.mp4"
+                    type="video/mp4">
+          </video>
+        </div>
+        <div class="item item-chair-tp">
+          <video poster="" id="chair-tp" autoplay controls muted loop playsinline height="100%">
+            <source src="assets/videos-sotas/video_demo_seedvrdemo7_2.mp4"
+                    type="video/mp4">
+          </video>
+        </div>
+        <div class="item item-chair-tp">
+          <video poster="" id="chair-tp" autoplay controls muted loop playsinline height="100%">
+            <source src="assets/videos-sotas/video_demo_seedvrdemo7_4.mp4"
+                    type="video/mp4">
+          </video>
+        </div>
+        <div class="item item-chair-tp">
+          <video poster="" id="chair-tp" autoplay controls muted loop playsinline height="100%">
+            <source src="assets/videos-sotas/video_demo_aigc50_6.mp4"
+                    type="video/mp4">
+          </video>
+        </div>
+        <div class="item item-steve">
+          <video poster="" id="steve" autoplay controls muted loop playsinline height="100%">
+            <source src="assets/videos-sotas/video_demo_aigc50_7.mp4"
+                    type="video/mp4">
+          </video>
+        </div>
+        <div class="item item-steve">
+          <video poster="" id="steve" autoplay controls muted loop playsinline height="100%">
+            <source src="assets/videos-sotas/video_demo_aigc50_8.mp4"
+                    type="video/mp4">
+          </video>
+        </div>
+        <div class="item item-chair-tp">
+          <video poster="" id="chair-tp" autoplay controls muted loop playsinline height="100%">
+            <source src="assets/videos-sotas/video_demo_seedvrdemo7_5.mp4"
+                    type="video/mp4">
+          </video>
+        </div>
+        <div class="item item-chair-tp">
+          <video poster="" id="chair-tp" autoplay controls muted loop playsinline height="100%">
+            <source src="assets/videos-sotas/video_demo_aigc50_3.mp4"
+                    type="video/mp4">
+          </video>
+        </div>
+      </div>
+
+
+      <br><br>
+
+      <div class="columns is-centered has-text-centered title is-5">Synthetic low-quality videos</div>
+      <div id="results-carousel" class="carousel results-carousel">
+        <div class="item item-steve">
+          <video poster="" id="steve" autoplay controls muted loop playsinline height="100%">
+            <source src="assets/videos-sotas/video_demo_youhq_4.mp4"
+                    type="video/mp4">
+          </video>
+        </div>
+        <div class="item item-chair-tp">
+          <video poster="" id="chair-tp" autoplay controls muted loop playsinline height="100%">
+            <source src="assets/videos-sotas/video_demo_youhq_5.mp4"
+                    type="video/mp4">
+          </video>
+        </div>
+        <div class="item item-chair-tp">
+          <video poster="" id="chair-tp" autoplay controls muted loop playsinline height="100%">
+            <source src="assets/videos-sotas/video_demo_youhq_6.mp4"
+                    type="video/mp4">
+          </video>
+        </div>
+        <div class="item item-chair-tp">
+          <video poster="" id="chair-tp" autoplay controls muted loop playsinline height="100%">
+            <source src="assets/videos-sotas/video_demo_youhq_7.mp4"
+                    type="video/mp4">
+          </video>
+        </div>
+        <div class="item item-chair-tp">
+          <video poster="" id="chair-tp" autoplay controls muted loop playsinline height="100%">
+            <source src="assets/videos-sotas/video_demo_youhq_8.mp4"
+                    type="video/mp4">
+          </video>
+        </div>
+        <div class="item item-steve">
+          <video poster="" id="steve" autoplay controls muted loop playsinline height="100%">
+            <source src="assets/videos-sotas/video_demo_youhq_9.mp4"
+                    type="video/mp4">
+          </video>
+        </div>
+        <div class="item item-steve">
+          <video poster="" id="steve" autoplay controls muted loop playsinline height="100%">
+            <source src="assets/videos-sotas/video_demo_youhq_10.mp4"
+                    type="video/mp4">
+          </video>
+        </div>
+        <div class="item item-chair-tp">
+          <video poster="" id="chair-tp" autoplay controls muted loop playsinline height="100%">
+            <source src="assets/videos-sotas/video_demo_youhq_12.mp4"
+                    type="video/mp4">
+          </video>
+        </div>
+      </div>
+
+
+
+
+    </div>
+  </div>
+</section>
+
+
+
+<section class="section" id="BibTeX">
+  <div class="container is-max-desktop content">
+    <h2 class="title">BibTeX</h2>
+    <pre><code>@misc{bai2025vividvr,
+      title={Vivid-VR: Distilling Concepts from Diffusion Transformer for Photorealistic Video Restoration}, 
+      author={Haoran Bai and Xiaoxu Chen and Canqian Yang and Zongyao He and Sibin Deng and Ying Chen},
+      year={2025},
+      url={https://github.com/csbhr/Vivid-VR}
+}</code></pre>
+  </div>
+</section>
+
+
+
+<footer class="footer">
+  <div class="container">
+    <div class="content has-text-centered">
+      <a class="icon-link"
+         href="https://github.com/SeedVR-CVPR25">
+        <i class="fas fa-file-pdf"></i>
+      </a>
+      <a class="icon-link" href="https://github.com/SeedVR-CVPR25" class="external-link" disabled>
+        <i class="fab fa-github"></i>
+      </a>
+    </div>
+    <div class="columns is-centered">
+      <div class="column is-8">
+        <div class="content">
+          <p>
+            This website is licensed under a <a rel="license"
+                                                href="http://creativecommons.org/licenses/by-sa/4.0/">Creative
+            Commons Attribution-ShareAlike 4.0 International License</a>.
+          </p>
+          <!-- <p>
+            Website adapted from the following <a
+              href="https://github.com/nerfies/nerfies.github.io">source code</a>.
+          </p> -->
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
+
+
+  <script src="./static/js/bulma-carousel.min.js"></script>
+  <script src="./static/js/bulma-slider.min.js"></script>
+  <script src="./static/js/index.js"></script>
+  <script src="./static/js/jquery.event.move.js"></script>
+  <script src="./static/js/jquery.twentytwenty.js"></script>
+  <script>
+  $(function(){
+    $(".twentytwenty-container").twentytwenty();
+  });
+  </script>
+
+
+
+</body>
+</html>
