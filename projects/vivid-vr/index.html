@@ -90,12 +90,12 @@
             <div class="publication-links">
               <!-- PDF Link. -->
               <span class="link-block">
-                <a href="#"
+                <a href="https://arxiv.org/abs/2508.14483"
                    class="external-link button is-normal is-rounded is-dark">
                   <span class="icon">
                       <i class="fas fa-file-pdf"></i>
                   </span>
-                  <span>Paper (Coming Soon!)</span>
+                  <span>Paper</span>
                 </a>
               </span>
               <!-- <span class="link-block">
@@ -282,12 +282,7 @@
         <h2 class="title is-3">Abstract</h2>
         <div class="content has-text-justified">
           <p>
-            We present Vivid-VR, a generative video restoration method built upon an advanced DiT-based T2V model (i.e., CogVideoX1.5-5B), where ControlNet is leveraged to control the generation process, ensuring content consistency.
-            Limited by training data diversity and multimodal alignment, fine-tuning the controllable generation pipeline often leads to drift, degrading texture realism and temporal coherence in the output.
-            To tackle this challenge, we propose a concept distillation training strategy that leverages the T2V base model to synthesize training samples with embedded textual concepts, thereby distilling its conceptual understanding to preserve texture and temporal quality.
-            For more effective control, we design an adaptive feature modulation mechanism, comprising a control feature projector and a new ControlNet connector, which not only enable precise control but also filters out low-quality input features to mitigate their adverse effects.
-            Furthermore, we introduce a mutually exclusive fusion-based aggregation sampling strategy to resolve boundary artifacts in DiT's aggregated sampling, enabling high-resolution video inference with controllable memory usage.
-            Extensive experiments show that Vivid-VR performs favorably against existing approaches on both synthetic and real-world benchmarks, as well as in AIGC videos, achieving impressive texture realism, visual vividness, and temporal consistency.
+            We present Vivid-VR, a DiT-based generative video restoration method built upon an advanced T2V foundation model, where ControlNet is leveraged to control the generation process, ensuring content consistency. However, conventional fine-tuning of such controllable pipelines frequently suffers from distribution drift due to limitations in imperfect multimodal alignment, resulting in compromised texture realism and temporal coherence. To tackle this challenge, we propose a concept distillation training strategy that utilizes the pretrained T2V model to synthesize training samples with embedded textual concepts, thereby distilling its conceptual understanding to preserve texture and temporal quality. To enhance generation controllability, we redesign the control architecture with two key components: 1) a control feature projector that filters degradation artifacts from input video latents to minimize their propagation through the generation pipeline, and 2) a new ControlNet connector employing a dual-branch design. This connector synergistically combines MLP-based feature mapping with cross-attention mechanism for dynamic control feature retrieval, enabling both content preservation and adaptive control signal modulation. Extensive experiments show that Vivid-VR performs favorably against existing approaches on both synthetic and real-world benchmarks, as well as AIGC videos, achieving impressive texture realism, visual vividness, and temporal consistency.
           </p>
         </div>
       </div>
@@ -304,7 +299,7 @@
       <div class="column">
         <h2 class="title is-3">Method</h2>
         <div class="content has-text-justified">
-          <p>
+          <!-- <p>
             Given a low-quality input video, Vivid-VR first generates a text description using CogVLM2-Video and encodes it into text tokens via the T5 encoder.
             Simultaneously, the input video is encoded into video latent by the 3D VAE encoder, which is further processed by the proposed control feature projector to remove low-quality features.
             The video latent is then patchified and noise is added to produce visual tokens.
@@ -312,7 +307,7 @@
             To improve controllability, we design a two-branch connector: one branch uses an MLP for feature mapping, while the other branch employs the cross-attention mechanism to dynamically retrieve the most relevant control features, enabling adaptive alignment with the input video during generation.
             After T denoising steps, the denoised latent is decoded by the 3D VAE to generate the final high-quality video.
             The control feature projector, ControlNet, and connectors are trained using the proposed concept distillation training strategy, and the remaining parameters are frozen.
-          </p>
+          </p> -->
           <div class="column">
             <img src="assets/framework.png" />
           </div>
@@ -347,11 +342,11 @@
           <p>
             To better evaluate the proposed method, we propose two testsets, named UGC50 and AIGC50, which contain 50 real-world UGC videos and 50 AIGC videos respectively. You can download these two testsets from this [<a href="https://huggingface.co/csbhr/Vivid-VR/blob/main/testset.zip">link</a>].
           </p>
-          <p>
-            For synthetic testsets, we employ full-reference metrics (PSNR, SSIM, LPIPS, and DISTS) and no-reference metrics (NIQE, CLIP-IQA, MUSIQ, DOVER, and MD-VQA). For real-world and AIGC testset, we only adopt no-reference metrics due to the absence of ground truth. Experimental results show that Vivid-VR achieves almost the best results on no-reference metrics.
-          </p>
+          <!-- <p>
+            For synthetic testsets, we employ full-reference metrics (PSNR, SSIM, LPIPS) and no-reference metrics (NIQE, CLIP-IQA, MUSIQ, DOVER, MD-VQA). For real-world and AIGC testset, we only adopt no-reference metrics due to the absence of ground truth. Experimental results show that Vivid-VR achieves almost the best results on no-reference metrics.
+          </p> -->
           <div class="column">
-            <img src="assets/quantitative-results.jpg" />
+            <img src="assets/quantitative-results.png" />
           </div>
         </div>
 
@@ -370,6 +365,15 @@
       <!-- <div class="column is-four-fifths"> -->
       <div class="column">
         <h2 class="title is-3">Qualitative results</h2>
+
+        <div class="content has-text-justified">
+          <div class="column">
+            <img src="assets/qualitative-results.png" />
+          </div>
+          <div class="column">
+            <img src="assets/qualitative-temporal-results.png" />
+          </div>
+        </div>
 
 
       </div>
@@ -556,11 +560,12 @@
 <section class="section" id="BibTeX">
   <div class="container is-max-desktop content">
     <h2 class="title">BibTeX</h2>
-    <pre><code>@misc{bai2025vividvr,
-      title={Vivid-VR: Distilling Concepts from Diffusion Transformer for Photorealistic Video Restoration}, 
-      author={Haoran Bai and Xiaoxu Chen and Canqian Yang and Zongyao He and Sibin Deng and Ying Chen},
+    <pre><code>@article{bai2025vividvr,
+      title={Vivid-VR: Distilling Concepts from Text-to-Video Diffusion Transformer for Photorealistic Video Restoration}, 
+      author={Bai, Haoran and Chen, Xiaoxu and Yang, Canqian and He, Zongyao and Deng, Sibin and Chen, Ying},
+      journal={arXiv preprint arXiv:2508.14483},
       year={2025},
-      url={https://github.com/csbhr/Vivid-VR}
+      url={https://arxiv.org/abs/2508.14483}
 }</code></pre>
   </div>
 </section>
